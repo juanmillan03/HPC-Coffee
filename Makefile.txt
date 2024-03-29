@@ -1,0 +1,18 @@
+SHELL:=/bin/bash
+
+all: main.x
+
+%.x: %.o vector_ops.o
+	g++ $^ -o $@
+
+test.x: test.o vector_ops.o
+	g++ $^ -o $@ -l Catch2Main -l Catch2
+
+test: test.x
+	./test.x
+
+%.o: %.cpp
+	g++ -c $<
+
+clean:
+	rm -f *.o *.x
