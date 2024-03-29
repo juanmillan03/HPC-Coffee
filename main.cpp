@@ -7,20 +7,31 @@
 
 int main(int argc, char* argv[]) {
 
-    if (argc != 5) {
-        std::cerr << "Usage: " << argv[0] << " <n>" << std::endl;
-        return 2;
-    }
     std::ofstream outfile;
     std::ofstream outfile2;
     std::ofstream outfile3;
     outfile3.open("gp/tamano.dat");
     outfile2.open("gp/entropy.dat");
     outfile.open("gp/datos.dat");
-    int N = std::atoi(argv[1]);
-    int latti = std::atoi(argv[2]); 
-    int it = std::atoi(argv[3]);
-    int seed = std::atoi(argv[4]); 
+
+    std::ifstream file("input.txt");
+    if (!file) {
+        std::cerr << "Unable to open file parameters.txt" << std::endl;
+        return 1; // Exit the program if the file cannot be opened
+    }
+
+    std::vector<int> integers;
+    int number;
+    while (file >> number) {
+        integers.push_back(number);
+    }
+
+    file.close();
+
+    int N = integers[0];
+    int latti = integers[1]; 
+    int it = integers[2];
+    int seed = integers[3];  
 
     std::vector<Coffee> cup(N);
     std::mt19937 gen(seed);
@@ -29,7 +40,7 @@ int main(int argc, char* argv[]) {
     inicial(cup,N);
     for (int i = 0; i < it; i++){
         move(cup[dis(gen)],N,seed+i);
-        if (i%10000==0)
+        if (i%1000==0)
         {
             std::vector<double>respuesta=calculos(cup,N,latti);
             outfile2<<i<<" "<<respuesta[0]<<std::endl;

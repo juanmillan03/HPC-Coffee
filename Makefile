@@ -7,7 +7,7 @@ compilar:
 
 # Regla para ejecutar el programa y generar la matriz
 link: 
-	./a.out 400 25 6000000 10
+	./a.out
 	rm -f *.out
 gnuplot:
 	gnuplot gp/Tasa.gp
