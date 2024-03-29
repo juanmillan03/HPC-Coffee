@@ -9,7 +9,7 @@ int main(int argc, char* argv[]) {
 
     if (argc != 5) {
         std::cerr << "Usage: " << argv[0] << " <n>" << std::endl;
-        return 1;
+        return 2;
     }
     std::ofstream outfile;
     std::ofstream outfile2;
