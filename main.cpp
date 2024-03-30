@@ -33,22 +33,10 @@ int main(int argc, char* argv[]) {
     inicial(cup,N);
     for (int i = 0; i < it; i++){
         move(cup[dis(gen)],N,seed+i);
-        // if (i%1000==0)
-        // {
-        //     std::vector<double>respuesta=calculos(cup,N,latti);
-        //     outfile2<<i<<" "<<respuesta[0]<<std::endl;
-        //     outfile3<<i<<" "<<respuesta[1]<<std::endl;
-        //     for (int j = 5; i<80; i++)
-        //     {
-        //         double entropia_anterior=0;
-        //         double entropia_anterior=0;
-        //         std::vector<double>respuesta=calculos(cup,N,j);
-        //     }  
-        // }
     }
     for (int i = 0; i < N; i++)
     {
-        std::cout<<cup[i].x()<<" "<<cup[i].y()<<std::endl;
+        std::cout<<cup[i].x()<<"\t"<<cup[i].y()<<std::endl;
     }
    
 

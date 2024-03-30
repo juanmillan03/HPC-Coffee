@@ -9,7 +9,7 @@ std::vector<double> calculos(std::vector<Coffee>&cup,int N,int latti){
         int ii =(cup[i].x()+100)/latti;
         int jj =(cup[i].y()+100)/latti;
         suma[jj*L+ii]=suma[jj*L+ii]+1.0/N;
-        suma_r+=cup[i].r()*cup[i].r();
+        suma_r+=cup[i].r();
     }
     double E=0;
     for (int i = 0; i < L*L; i++)

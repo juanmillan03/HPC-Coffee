@@ -27,11 +27,13 @@ int main(int argc, char* argv[]) {
     std::mt19937 gen(seed);
     std::uniform_int_distribution<> dis(0, N - 1);
     inicial(cup,N);
-    for (int i = 0; i < it;){
+    for (int i = 0; i < it; i++){
         move(cup[dis(gen)],N,seed+i);
-        std::vector<double>respuesta=calculos(cup,N,latti);
-        std::cout<<i<<" "<<respuesta[0]<<" "<<respuesta[1]<<std::endl;
-        i+=1000;
+        if (i%1000==0)
+        {
+            std::vector<double>respuesta=calculos(cup,N,latti);
+            std::cout<<i<<"\t"<<respuesta[0]<<"\t"<<respuesta[1]<<std::endl;
+        }
     }
     return 0;
 }

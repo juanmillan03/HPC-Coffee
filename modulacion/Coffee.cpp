@@ -17,6 +17,6 @@ void Coffee::move_y(bool plus){
     else{Y-=1;}
 }
 double Coffee::r(void){
-    double R=std::sqrt(X*X+Y*Y);
-    return R;
+    double R2=X*X+Y*Y;
+    return R2;
 }
