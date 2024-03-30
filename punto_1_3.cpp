@@ -29,7 +29,7 @@ int main(int argc, char* argv[]) {
     inicial(cup,N);
     for (int i = 0; i < it; i++){
         move(cup[dis(gen)],N,seed+i);
-        if (i%1000==0)
+        if (i%10000==0)
         {
             std::vector<double>respuesta=calculos(cup,N,latti);
             std::cout<<i<<"\t"<<respuesta[0]<<"\t"<<respuesta[1]<<std::endl;

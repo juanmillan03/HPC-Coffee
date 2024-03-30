@@ -14,6 +14,7 @@ def dispercion(data_path):
     ax.grid(True, linewidth=0.1)
     plt.savefig("./pdf/Tasa.pdf")
     
+    
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: python graficador.py <data_path>")
