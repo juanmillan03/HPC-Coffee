@@ -18,39 +18,20 @@ int main(int argc, char* argv[]) {
     while (file >> number) {
         integers.push_back(number);
     }
-
     file.close();
-
     int N = integers[0];
     int latti = integers[1]; 
     int it = integers[2];
     int seed = integers[3];  
-
     std::vector<Coffee> cup(N);
     std::mt19937 gen(seed);
     std::uniform_int_distribution<> dis(0, N - 1);
-
     inicial(cup,N);
-    for (int i = 0; i < it; i++){
+    for (int i = 0; i < it;){
         move(cup[dis(gen)],N,seed+i);
-        // if (i%1000==0)
-        // {
-        //     std::vector<double>respuesta=calculos(cup,N,latti);
-        //     outfile2<<i<<" "<<respuesta[0]<<std::endl;
-        //     outfile3<<i<<" "<<respuesta[1]<<std::endl;
-        //     for (int j = 5; i<80; i++)
-        //     {
-        //         double entropia_anterior=0;
-        //         double entropia_anterior=0;
-        //         std::vector<double>respuesta=calculos(cup,N,j);
-        //     }  
-        // }
+        std::vector<double>respuesta=calculos(cup,N,latti);
+        std::cout<<i<<" "<<respuesta[0]<<" "<<respuesta[1]<<std::endl;
+        i+=1000;
     }
-    for (int i = 0; i < N; i++)
-    {
-        std::cout<<cup[i].x()<<" "<<cup[i].y()<<std::endl;
-    }
-   
-
     return 0;
 }
