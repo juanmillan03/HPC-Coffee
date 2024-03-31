@@ -6,5 +6,5 @@
 #include <ostream>
 #include <iostream>
 
-std::vector<double> calculos(std::vector<Coffee>&cup,int N,int latti);
+std::vector<double> calculos(std::vector<Coffee>&cup,int N,int latti,int Lx);
 double TiempoEquilibrio(std::vector<double>&num, double accuracy, int it, int data);

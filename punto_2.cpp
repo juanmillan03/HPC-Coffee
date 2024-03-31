@@ -33,18 +33,16 @@ int main(int argc, char* argv[]) {
 
     std::vector<double> Entropy (it/data);     //Guarda los datos de la entropía
     std::vector<int> sizes = {60,70,80,90,100};    //Tamaños de la red
-
     for (const auto& nt : sizes){
         inicial(cup,N);
         for (int i = 0; i < it; i++){
             move(cup[dis(gen)],N,seed+i,nt);
             if (i%data==0){
-                std::vector<double>respuesta=calculos(cup,N,latti);
+                std::vector<double>respuesta=calculos(cup,N,latti,nt);
                 Entropy[i/data] = respuesta[0];
             }
         }
         std::cout << nt*nt <<" "<<TiempoEquilibrio(Entropy, 0.5e-2, it, data) << std::endl;
     }
-
     return 0;
 }

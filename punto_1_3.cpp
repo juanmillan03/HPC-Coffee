@@ -31,7 +31,7 @@ int main(int argc, char* argv[]) {
         move(cup[dis(gen)],N,seed+i,100);
         if (i%10000==0)
         {
-            std::vector<double>respuesta=calculos(cup,N,latti);
+            std::vector<double>respuesta=calculos(cup,N,latti,100);
             std::cout<<i<<"\t"<<respuesta[0]<<"\t"<<respuesta[1]<<std::endl;
         }
     }

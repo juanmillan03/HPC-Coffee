@@ -6,19 +6,15 @@ OBJDIR = modulacion
 OBJ = $(OBJDIR)/Coffee.o $(OBJDIR)/Walk.o $(OBJDIR)/Calculos.o $(OBJDIR)/SmallHole.o
 cpps = $(OBJDIR)/Coffee.cpp $(OBJDIR)/Walk.cpp $(OBJDIR)/Calculos.cpp $(OBJDIR)/SmallHole.cpp
 
-TARGET = plot
-TEST_TARGET = test
-
 # Regla para compilar todos los objetivos
-all: $(TARGET)
+all: plot
 
 # Regla para compilar archivos .o a partir de archivos .cpp en el directorio modulacion
 $(OBJDIR)/%.o: $(OBJDIR)/%.cpp
 	g++ $(CFLAGS) -c $< -o $@
 
 # Regla para ejecutar el programa
-run: $(TARGET)
-	./$(TARGET)
+run: plot
 
 # Regla para compilar y ejecutar main.x
 main.x: main.o $(OBJ)
@@ -41,17 +37,18 @@ punto_4.x: punto_4.o $(OBJ)
 	./punto_4.x input.txt >py/SmallHole.dat
 
 # Regla para ejecutar los scripts de Python y limpiar
-$(TARGET): main.x punto_1_3.x punto_2.x punto_4.x 
+plot: main.x punto_1_3.x punto_2.x punto_4.x 
 	python3 py/Tasa.py py/datos.dat
 	python3 py/Entropy_size.py py/Entropy_size.dat
 	python3 py/SmallHole.py py/SmallHole.dat
 	python3 py/tiempos.py py/tiempos.dat
-	rm -f *.x *.o
+	rm -f *.x *.o modulacion/*.o
 
 # Regla para compilar y ejecutar pruebas
-$(TEST_TARGET): test.cpp modulacion/Coffee.cpp
-	g++ -O3 $^ -o $(TEST_TARGET)
-	./$(TEST_TARGET)
+test: test.cpp $(cpps)
+	g++ -O3 $^ -o test
+	./test
+	rm -f test
 # Regla para limpiar los archivos generados
 clean:
-	rm -f $(TARGET) *.o $(OBJDIR)/*.o $(TEST_TARGET)
+	rm -f $(TARGET) *.o $(OBJDIR)/*.o test

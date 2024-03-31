@@ -8,17 +8,18 @@ def dispercion(data_path):
     datos=pd.read_csv(data_path,sep="\t" ,names=['t','E',"S"])
     
     fig1, ax1 = plt.subplots( )
-    datos["t"]=datos["t"]/1e6
-    ax1.scatter(datos['t'],datos['E'],s=2)
+    ax1.scatter(datos['t']/1e6,datos['E'],s=2)
     ax1.set_xlabel("time(10⁶unit)")
     ax1.set_ylabel("Entropy")
     ax1.grid(True, linewidth=0.1)
     plt.savefig("./pdf/Entropy.pdf")
     
     fig2, ax2 = plt.subplots( )
-    ax2.scatter(datos['t']**0.5,datos['S'],s=2)
-    ax2.set_xlabel("time(10⁶unit)")
-    ax2.set_ylabel("Tamaño")
+    t=np.arange(0, 1.5, 0.2)
+    ax2.plot(t,t)
+    ax2.scatter((datos['t']/1e6)**0.5,datos['S']/50,s=2,c="r")
+    ax2.set_xlabel(r"tiempo$^{1/2}$(10⁶unit)")
+    ax2.set_ylabel("Tamaño/50")
     ax2.grid(True, linewidth=0.1)
     plt.savefig("./pdf/Size.pdf")
     

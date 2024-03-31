@@ -9,8 +9,8 @@ def dispercion(data_path):
     datos=pd.read_csv(data_path,sep=" " ,names=['s2','t'])
     fig, ax = plt.subplots( )
     ax.scatter(datos['s2'],datos['t'])
-    ax.set_xlabel("s²")
-    ax.set_ylabel("Tiempo asentamiento")
+    ax.set_xlabel("Area del vaso(unit²)")
+    ax.set_ylabel("Tiempo asentamiento(steps)")
     ax.grid(True, linewidth=0.1)
     plt.savefig("./pdf/tiempos.pdf")
     
