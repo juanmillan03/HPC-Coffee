@@ -5,9 +5,9 @@
 #include <random>
 #include <fstream>
 
-int main() {
+int main(int argc, char* argv[]) {
 
-    std::ifstream file("input.txt");
+    std::ifstream file(argv[1]);
     if (!file) {
         std::cerr << "Unable to open file parameters.txt" << std::endl;
         return 1; // Exit the program if the file cannot be opened
@@ -25,7 +25,7 @@ int main() {
     int latti = integers[1]; 
     int it = integers[2];
     int seed = integers[3]; 
-    int data = 10000;         //Ayuda a definir cuantos datos queremos ya que divide al tiempo total
+    int data = 100;         //Ayuda a definir cuantos datos queremos ya que divide al tiempo total
 
     std::vector<Coffee> cup(N);
     std::mt19937 gen(seed);

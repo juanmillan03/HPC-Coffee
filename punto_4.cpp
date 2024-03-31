@@ -9,14 +9,7 @@
 // Define la función principal del programa.
 int main(int argc, char* argv[]) {
 
-    std::ofstream outfile; // Crea un objeto de flujo de archivo para escribir datos.
-    std::ofstream outfile2; // Crea un segundo objeto de flujo de archivo para escribir datos de entropía.
-    std::ofstream outfile3; // Crea un tercer objeto de flujo de archivo para escribir datos de tamaño.
-    outfile3.open("gp/tamano.dat"); // Abre un archivo para escribir datos de tamaño.
-    outfile2.open("gp/entropy.dat"); // Abre un archivo para escribir datos de entropía.
-    outfile.open("gp/datos.dat"); // Abre un archivo para escribir datos generales.
-
-    std::ifstream file("input.txt"); // Abre un archivo de entrada para leer parámetros.
+    std::ifstream file(argv[1]); // Abre un archivo de entrada para leer parámetros.
     if (!file) {
         std::cerr << "Unable to open file parameters.txt" << std::endl; // Muestra un mensaje de error si el archivo no se puede abrir.
         return 1; // Sale del programa si el archivo no se puede abrir.

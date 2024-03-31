@@ -28,6 +28,8 @@ double TiempoEquilibrio(std::vector<double>&num, double accuracy, int it, int da
     for (int i = 0; i < it/data; i++){
         if (std::fabs(num[i]-0.97*value) < accuracy){
             t_eq = i*data;
+
+            break;
         }
     }
 
