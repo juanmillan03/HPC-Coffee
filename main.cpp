@@ -1,6 +1,5 @@
 #include "modulacion/Coffee.hpp"
 #include "modulacion/Walk.hpp"
-#include "modulacion/Calculos.hpp"
 #include <iostream>
 #include <random>
 #include<fstream>
@@ -22,14 +21,12 @@ int main(int argc, char* argv[]) {
     file.close();
 
     int N = integers[0];
-    int latti = integers[1]; 
     int it = integers[2];
     int seed = integers[3];  
 
     std::vector<Coffee> cup(N);
     std::mt19937 gen(seed);
     std::uniform_int_distribution<> dis(0, N - 1);
-
     inicial(cup,N);
     for (int i = 0; i < it; i++){
         move(cup[dis(gen)],N,seed+i);
