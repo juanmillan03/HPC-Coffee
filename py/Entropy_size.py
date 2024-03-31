@@ -16,10 +16,10 @@ def dispercion(data_path):
     
     fig2, ax2 = plt.subplots( )
     t=np.arange(0, 1.5, 0.2)
-    ax2.plot(t,t)
-    ax2.scatter((datos['t']/1e6)**0.5,datos['S']/50,s=2,c="r")
+    ax2.plot(t,45*t+4)
+    ax2.scatter((datos['t']/1e6)**0.5,datos['S'],s=2,c="r")
     ax2.set_xlabel(r"tiempo$^{1/2}$(10⁶unit)")
-    ax2.set_ylabel("Tamaño/50")
+    ax2.set_ylabel("Tamaño")
     ax2.grid(True, linewidth=0.1)
     plt.savefig("./pdf/Size.pdf")
     
