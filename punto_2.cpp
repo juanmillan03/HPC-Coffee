@@ -5,9 +5,9 @@
 #include <random>
 #include <fstream>
 
-int main() {
+int main(int argc, char* argv[]) {
 
-    std::ifstream file("input.txt");
+    std::ifstream file(argv[1]);
     if (!file) {
         std::cerr << "Unable to open file parameters.txt" << std::endl;
         return 1; // Exit the program if the file cannot be opened
