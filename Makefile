@@ -61,4 +61,4 @@ profiling:
 
 # Regla para limpiar los archivos generados
 clean:
-	rm -f $(TARGET) *.o $(OBJDIR)/*.o test
+	rm -f $(TARGET) *.o *.x $(OBJDIR)/*.o test
