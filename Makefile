@@ -56,7 +56,7 @@ profiling:
 	g++ $(GPROFFLAGS) -c punto_1_3.cpp modulacion/Coffee.cpp modulacion/Walk.cpp modulacion/Calculos.cpp
 	g++ $(GPROFFLAGS) punto_1_3.o Coffee.o Walk.o Calculos.o -o gprof_report.x
 	./gprof_report.x input-profiling.txt > output_profiling.dat
-	gprof gprof_report.x gmon.out > grpof-report.txt
+	gprof gprof_report.x gmon.out > gprof-report.txt
 	rm gmon.out *.o *.x output_profiling.dat
 
 # Regla para limpiar los archivos generados
