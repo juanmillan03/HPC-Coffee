@@ -25,19 +25,20 @@ int main(int argc, char* argv[]) {
     int latti = integers[1]; 
     int it = integers[2];
     int seed = integers[3]; 
-    int data = 1000;         //Ayuda a definir cuantos datos queremos ya que divide al tiempo total
+    int data = 100;         //Ayuda a definir cuantos datos queremos ya que divide al tiempo total
 
     std::vector<Coffee> cup(N);
     std::mt19937 gen(seed);
     std::uniform_int_distribution<> dis(0, N - 1);
 
     std::vector<double> Entropy (it/data);     //Guarda los datos de la entropía
-    std::vector<double> sizes = {5, 10, 20, 25, 40, 50, 100};    //Tamaños de la red
+    std::vector<double> sizes = {4, 5, 10, 20, 40, 50};    //Tamaños de la red
     
 
-    inicial(cup,N);
+    
 
     for (const auto& nt : sizes){
+        inicial(cup,N);
         for (int i = 0; i < it; i++){
             move(cup[dis(gen)],N,seed+i);
             if (i%data==0){
@@ -45,7 +46,7 @@ int main(int argc, char* argv[]) {
                 Entropy[i/data] = respuesta[0];
             }
         }
-        std::cout << nt*nt <<" "<<TiempoEquilibrio(Entropy, 1e-3, it, data) << std::endl;
+        std::cout << nt*nt <<" "<<TiempoEquilibrio(Entropy, 1e-2, it, data) << std::endl;
     }
 
     return 0;

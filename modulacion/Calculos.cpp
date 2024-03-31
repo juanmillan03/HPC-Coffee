@@ -23,11 +23,13 @@ std::vector<double> calculos(std::vector<Coffee>&cup,int N,int latti){
 }
 
 double TiempoEquilibrio(std::vector<double>&num, double accuracy, int it, int data){
-    double value = static_cast<double>(std::accumulate(num.end() - 500000/data, num.end(), 0.0))/(500000/data);
-    double t_eq;
+    double value = std::accumulate(num.end() - 500000/data, num.end(), 0.0)/(500000.0/data);
+    double t_eq = 0;
     for (int i = 0; i < it/data; i++){
         if (std::fabs(num[i]-0.97*value) < accuracy){
             t_eq = i*data;
+
+            break;
         }
     }
 
