@@ -2,6 +2,7 @@
 CFLAGS = -fsanitize=address -fsanitize=undefined -fsanitize=leak -O3
 CATCHFLAGS = -l Catch2Main -l Catch2
 GPROFFLAGS = -Wall -pg -g
+MEMFLAGS = --tool=memcheck --leak-check=yes
 # Definición de objetivos y fuentes
 OBJDIR = modulacion
 OBJ = $(OBJDIR)/Coffee.o $(OBJDIR)/Walk.o $(OBJDIR)/Calculos.o $(OBJDIR)/SmallHole.o
@@ -20,7 +21,7 @@ run: plot
 # Regla para compilar y ejecutar main.x
 main.x: main.o $(OBJ)
 	g++ $(CFLAGS) $^ -o main.x
-	./main.x input.txt >py/datos.dat
+	./main.x input.txt >py/Tasa.dat
 
 # Regla para compilar y ejecutar punto_1_3.x
 punto_1_3.x: punto_1_3.o $(OBJ)
@@ -39,7 +40,7 @@ punto_4.x: punto_4.o $(OBJ)
 
 # Regla para ejecutar los scripts de Python y limpiar
 plot: main.x punto_1_3.x punto_2.x punto_4.x 
-	python3 py/Tasa.py py/datos.dat
+	python3 py/Tasa.py py/Tasa.dat
 	python3 py/Entropy_size.py py/Entropy_size.dat
 	python3 py/SmallHole.py py/SmallHole.dat
 	python3 py/tiempos.py py/tiempos.dat
@@ -58,6 +59,12 @@ profiling:
 	./gprof_report.x input-profiling.txt > output_profiling.dat
 	gprof gprof_report.x gmon.out > gprof-report.txt
 	rm gmon.out *.o *.x output_profiling.dat
+
+memcheck: 
+	g++ -g -c -O3 punto_1_3.cpp modulacion/Coffee.cpp modulacion/Walk.cpp modulacion/Calculos.cpp
+	g++ -g -O3 punto_1_3.o Coffee.o Walk.o Calculos.o -o memcheck.x
+	valgrind $(MEMFLAGS) ./memcheck.x input.txt>memcheck.dat
+	rm *.o *.x memcheck.dat
 
 # Regla para limpiar los archivos generados
 clean:

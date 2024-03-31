@@ -11,8 +11,8 @@ def dispercion(data_path):
     ax.scatter(datos['x'],datos['y'])
     ax.set_xlabel("x(unit)")
     ax.set_ylabel("y(unit)")
-    ax.set_xlim(xmin = -100, xmax = 100)
-    ax.set_ylim(ymin = -100, ymax = 100)
+    ax.set_xlim(xmin = -10, xmax = 10)
+    ax.set_ylim(ymin = -10, ymax = 10)
     plt.savefig("./pdf/Tasa.pdf")
     
     

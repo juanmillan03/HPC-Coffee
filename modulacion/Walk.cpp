@@ -24,7 +24,7 @@ void inicial(std::vector<Coffee> & cup,int N){
     for (int i = 0; i < largo-1; i++){
         for (int j = 0; j < largo-1; j++)
         {
-            cup[j*largo+i].load(i-10,j-10);
+            cup[j*largo+i].load(i-largo/2+1,j-largo/2+1);
         }
     }
 }
