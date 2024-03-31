@@ -11,7 +11,7 @@ int main(int argc, char* argv[]) {
 
     std::ifstream file(argv[1]); // Abre un archivo de entrada para leer parámetros.
     if (!file) {
-        std::cerr << "Unable to open file parameters.txt" << std::endl; // Muestra un mensaje de error si el archivo no se puede abrir.
+        std::cerr << "Unable to open file input.txt" << std::endl; // Muestra un mensaje de error si el archivo no se puede abrir.
         return 1; // Sale del programa si el archivo no se puede abrir.
     }
 

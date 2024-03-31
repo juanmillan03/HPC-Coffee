@@ -1,6 +1,7 @@
 # Definición de variables de compilación
 CFLAGS = -fsanitize=address -fsanitize=undefined -fsanitize=leak -O3
 CATCHFLAGS = -l Catch2Main -l Catch2
+GPROFFLAGS = -Wall -pg -g
 # Definición de objetivos y fuentes
 OBJDIR = modulacion
 OBJ = $(OBJDIR)/Coffee.o $(OBJDIR)/Walk.o $(OBJDIR)/Calculos.o $(OBJDIR)/SmallHole.o
@@ -49,6 +50,15 @@ test: test.cpp $(cpps)
 	g++ -O3 $^ -o test
 	./test
 	rm -f test
+
+# Regla para compilar y generar el reporte de profiling
+profiling:
+	g++ $(GPROFFLAGS) -c punto_1_3.cpp modulacion/Coffee.cpp modulacion/Walk.cpp modulacion/Calculos.cpp
+	g++ $(GPROFFLAGS) punto_1_3.o Coffee.o Walk.o Calculos.o -o gprof_report.x
+	./gprof_report.x input-profiling.txt > output_profiling.dat
+	gprof gprof_report.x gmon.out > grpof-report.txt
+	rm gmon.out *.o *.x output_profiling.dat
+
 # Regla para limpiar los archivos generados
 clean:
 	rm -f $(TARGET) *.o $(OBJDIR)/*.o test
