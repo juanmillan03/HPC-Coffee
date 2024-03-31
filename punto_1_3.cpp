@@ -28,7 +28,7 @@ int main(int argc, char* argv[]) {
     std::uniform_int_distribution<> dis(0, N - 1);
     inicial(cup,N);
     for (int i = 0; i < it; i++){
-        move(cup[dis(gen)],N,seed+i);
+        move(cup[dis(gen)],N,seed+i,100);
         if (i%10000==0)
         {
             std::vector<double>respuesta=calculos(cup,N,latti);

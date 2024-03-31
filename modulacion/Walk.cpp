@@ -1,21 +1,21 @@
 #include "Walk.hpp"
 
-void move(Coffee & cup, int N,int seed){
+void move(Coffee & cup, int N,int seed,int L){
     std::mt19937 gen(seed);
     std::uniform_int_distribution<> dis(0, 3);
     switch (dis(gen))
     {
     case 0: 
-    if (cup.x()<99)
+    if (cup.x()<L-1)
     { cup.move_x(true);};break;
     case 1:
-    if (cup.x()>-99)
+    if (cup.x()>-L+1)
     { cup.move_x(false);};break;
     case 2:
-    if (cup.y()<99)
+    if (cup.y()<L-1)
     { cup.move_y(true);};break;
     case 3: 
-    if (cup.y()>-99)
+    if (cup.y()>-L+1)
     { cup.move_y(false);};break;
     }
 }

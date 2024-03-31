@@ -16,7 +16,7 @@ def dispercion(data_path):
     plt.savefig("./pdf/Entropy.pdf")
     
     fig2, ax2 = plt.subplots( )
-    ax2.scatter(datos['t'],datos['S'],s=2)
+    ax2.scatter(datos['t']**0.5,datos['S'],s=2)
     ax2.set_xlabel("time(10⁶unit)")
     ax2.set_ylabel("Tamaño")
     ax2.grid(True, linewidth=0.1)
