@@ -73,6 +73,15 @@ memcheck:
 	valgrind $(MEMFLAGS) ./memcheck.x input.txt>memcheck.dat
 	rm *.o *.x memcheck.dat
 
+tiempos:
+	g++ -g -c -O3 time.cpp modulacion/Coffee.cpp modulacion/Walk.cpp modulacion/Calculos.cpp
+	g++ -g -O3 time.o Coffee.o Walk.o Calculos.o -o time.x
+	./time.x input.txt>time.dat
+	g++ -g -c -O3 time.cpp modulacion/Coffee.cpp modulacion/Walk.cpp modulacion/Calculos.cpp
+	g++ -g -O3 time.o Coffee.o Walk.o Calculos.o -o timeO3.x
+	./timeO3.x input.txt>timeO3.dat
+	rm *.o *.x
+
 # Regla para limpiar los archivos generados
 clean:
 	rm -f $(TARGET) *.o *.x $(OBJDIR)/*.o test
