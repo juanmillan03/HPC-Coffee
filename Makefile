@@ -57,8 +57,15 @@ profiling:
 	g++ $(GPROFFLAGS) -c punto_1_3.cpp modulacion/Coffee.cpp modulacion/Walk.cpp modulacion/Calculos.cpp
 	g++ $(GPROFFLAGS) punto_1_3.o Coffee.o Walk.o Calculos.o -o gprof_report.x
 	./gprof_report.x input-profiling.txt > output_profiling.dat
-	gprof gprof_report.x gmon.out > gprof-report.txt
+	gprof gprof_report.x gmon.out > Report/gprof-report.txt
 	rm gmon.out *.o *.x output_profiling.dat
+
+cachegrind:
+	g++ -g -c -O3 punto_1_3.cpp modulacion/Coffee.cpp modulacion/Walk.cpp modulacion/Calculos.cpp
+	g++ -g -O3 punto_1_3.o Coffee.o Walk.o Calculos.o -o cache.x
+	valgrind --tool=cachegrind ./cache.x input.txt>cache.dat
+	cg_annotate --auto=yes cachegrind.out.* > Report/cachegrind-report.txt
+	rm *.o *.x cachegrind.out.* temp.dat cache.dat
 
 memcheck: 
 	g++ -g -c -O3 punto_1_3.cpp modulacion/Coffee.cpp modulacion/Walk.cpp modulacion/Calculos.cpp

@@ -1,0 +1,334 @@
+--------------------------------------------------------------------------------
+I1 cache:         32768 B, 64 B, 8-way associative
+D1 cache:         32768 B, 64 B, 8-way associative
+LL cache:         3145728 B, 64 B, 12-way associative
+Command:          ./cache.x input.txt
+Data file:        cachegrind.out.8831
+Events recorded:  Ir I1mr ILmr Dr D1mr DLmr Dw D1mw DLmw
+Events shown:     Ir I1mr ILmr Dr D1mr DLmr Dw D1mw DLmw
+Event sort order: Ir I1mr ILmr Dr D1mr DLmr Dw D1mw DLmw
+Thresholds:       0.1 100 100 100 100 100 100 100 100
+Include dirs:     
+User annotated:   cachegrind.out.8923
+Auto-annotation:  on
+
+--------------------------------------------------------------------------------
+Ir                      I1mr           ILmr           Dr                     D1mr            DLmr           Dw                     D1mw           DLmw           
+--------------------------------------------------------------------------------
+15,483,759,614 (100.0%) 8,174 (100.0%) 2,495 (100.0%) 1,287,240,612 (100.0%) 16,190 (100.0%) 7,838 (100.0%) 1,274,455,230 (100.0%) 2,842 (100.0%) 1,745 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+Ir                     I1mr           ILmr         Dr                     D1mr           DLmr           Dw                   D1mw           DLmw          file:function
+--------------------------------------------------------------------------------
+9,698,005,371 (62.63%)    76 ( 0.93%)   3 ( 0.12%) 1,254,006,956 (97.42%)   229 ( 1.41%)     0          626,001,875 (49.12%)     0            0           /usr/include/c++/11/bits/random.tcc:std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand()
+4,989,000,000 (32.22%)     1 ( 0.01%)   1 ( 0.04%)             0              0              0          625,000,000 (49.04%)   159 ( 5.59%)  49 ( 2.81%)  /usr/include/c++/11/bits/random.tcc:move(Coffee&, int, int, int)
+  624,000,000 ( 4.03%)     0            0                      0              0              0                    0              0            0           /usr/include/c++/11/bits/random.h:move(Coffee&, int, int, int)
+   62,000,000 ( 0.40%)     9 ( 0.11%)   5 ( 0.20%)    14,000,000 ( 1.09%)     0              0           12,000,000 ( 0.94%)     1 ( 0.04%)   1 ( 0.06%)  /usr/include/c++/11/bits/uniform_int_dist.h:int std::uniform_int_distribution<int>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_int_distribution<int>::param_type const&) [clone .isra.0]
+   45,004,809 ( 0.29%)   110 ( 1.35%)   7 ( 0.28%)     5,001,603 ( 0.39%)   250 ( 1.54%)     0            3,001,603 ( 0.24%)     0            0           /usr/include/c++/11/bits/random.tcc:int std::uniform_int_distribution<int>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_int_distribution<int>::param_type const&) [clone .isra.0]
+   29,996,575 ( 0.19%)     4 ( 0.05%)   4 ( 0.16%)     8,000,000 ( 0.62%)   181 ( 1.12%)     1 ( 0.01%)   3,999,862 ( 0.31%)     0            0           /home/juanmillan/Documents/UNAL/HPC/ProyectoIntermedio/HPC-Coffee/modulacion/Walk.cpp:move(Coffee&, int, int, int)
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /usr/include/c++/11/bits/random.h
+--------------------------------------------------------------------------------
+Ir                   I1mr       ILmr       Dr         D1mr       DLmr       Dw         D1mw       DLmw       
+
+-- line 132 ----------------------------------------
+          .          .          .          .          .          .          .          .          .               template<typename _Tp, _Tp __m, _Tp __a, _Tp __c, bool __s>
+          .          .          .          .          .          .          .          .          .                 struct _Mod<_Tp, __m, __a, __c, true, __s>
+          .          .          .          .          .          .          .          .          .                 {
+          .          .          .          .          .          .          .          .          .           	static _Tp
+          .          .          .          .          .          .          .          .          .           	__calc(_Tp __x)
+          .          .          .          .          .          .          .          .          .           	{
+          .          .          .          .          .          .          .          .          .           	  _Tp __res = __a * __x + __c;
+          .          .          .          .          .          .          .          .          .           	  if (__m)
+624,000,624 ( 4.03%) 1 ( 0.01%) 1 ( 0.04%) 1 ( 0.00%) 0          0          0          0          0           	    __res %= __m;
+          .          .          .          .          .          .          .          .          .           	  return __res;
+          .          .          .          .          .          .          .          .          .           	}
+          .          .          .          .          .          .          .          .          .                 };
+          .          .          .          .          .          .          .          .          .           
+          .          .          .          .          .          .          .          .          .               template<typename _Tp, _Tp __m, _Tp __a = 1, _Tp __c = 0>
+          .          .          .          .          .          .          .          .          .                 inline _Tp
+          .          .          .          .          .          .          .          .          .                 __mod(_Tp __x)
+          .          .          .          .          .          .          .          .          .                 {
+-- line 148 ----------------------------------------
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /usr/include/c++/11/bits/random.tcc
+--------------------------------------------------------------------------------
+Ir                     I1mr         ILmr       Dr                   D1mr         DLmr       Dw                   D1mw         DLmw        
+
+-- line 319 ----------------------------------------
+            .            .          .                    .            .          .                    .            .           .           	   _UIntType __a, size_t __u, _UIntType __d, size_t __s,
+            .            .          .                    .            .          .                    .            .           .           	   _UIntType __b, size_t __t, _UIntType __c, size_t __l,
+            .            .          .                    .            .          .                    .            .           .           	   _UIntType __f>
+            .            .          .                    .            .          .                    .            .           .               void
+            .            .          .                    .            .          .                    .            .           .               mersenne_twister_engine<_UIntType, __w, __n, __m, __r, __a, __u, __d,
+            .            .          .                    .            .          .                    .            .           .           			    __s, __b, __t, __c, __l, __f>::
+            .            .          .                    .            .          .                    .            .           .               seed(result_type __sd)
+            .            .          .                    .            .          .                    .            .           .               {
+    1,000,001 ( 0.01%)   1 ( 0.01%) 1 ( 0.04%)           0            0          0            1,000,001 ( 0.08%)   2 ( 0.07%)  1 ( 0.06%)        _M_x[0] = __detail::__mod<_UIntType,
+            .            .          .                    .            .          .                    .            .           .           	__detail::_Shift<_UIntType, __w>::__value>(__sd);
+            .            .          .                    .            .          .                    .            .           .           
+1,872,001,873 (12.09%)   0          0                    0            0          0                    0            0           0                 for (size_t __i = 1; __i < state_size; ++__i)
+            .            .          .                    .            .          .                    .            .           .           	{
+            .            .          .                    .            .          .                    .            .           .           	  _UIntType __x = _M_x[__i - 1];
+1,869,001,869 (12.07%)   0          0                    0            0          0                    0            0           0           	  __x ^= __x >> (__w - 2);
+  623,000,623 ( 4.02%)   0          0                    0            0          0                    0            0           0           	  __x *= __f;
+            .            .          .                    .            .          .                    .            .           .           	  __x += __detail::__mod<_UIntType, __n>(__i);
+  623,000,623 ( 4.02%)   0          0                    0            0          0          623,000,623 (48.88%) 221 ( 7.78%) 48 ( 2.75%)  	  _M_x[__i] = __detail::__mod<_UIntType,
+            .            .          .                    .            .          .                    .            .           .           	    __detail::_Shift<_UIntType, __w>::__value>(__x);
+            .            .          .                    .            .          .                    .            .           .           	}
+    1,000,001 ( 0.01%)   2 ( 0.02%) 2 ( 0.08%)           0            0          0            1,000,001 ( 0.08%)   0           0                 _M_p = state_size;
+            .            .          .                    .            .          .                    .            .           .               }
+            .            .          .                    .            .          .                    .            .           .           
+            .            .          .                    .            .          .                    .            .           .             template<typename _UIntType,
+            .            .          .                    .            .          .                    .            .           .           	   size_t __w, size_t __n, size_t __m, size_t __r,
+            .            .          .                    .            .          .                    .            .           .           	   _UIntType __a, size_t __u, _UIntType __d, size_t __s,
+            .            .          .                    .            .          .                    .            .           .           	   _UIntType __b, size_t __t, _UIntType __c, size_t __l,
+            .            .          .                    .            .          .                    .            .           .           	   _UIntType __f>
+            .            .          .                    .            .          .                    .            .           .               template<typename _Sseq>
+-- line 347 ----------------------------------------
+-- line 386 ----------------------------------------
+            .            .          .                    .            .          .                    .            .           .                 }
+            .            .          .                    .            .          .                    .            .           .           
+            .            .          .                    .            .          .                    .            .           .             template<typename _UIntType, size_t __w,
+            .            .          .                    .            .          .                    .            .           .           	   size_t __n, size_t __m, size_t __r,
+            .            .          .                    .            .          .                    .            .           .           	   _UIntType __a, size_t __u, _UIntType __d, size_t __s,
+            .            .          .                    .            .          .                    .            .           .           	   _UIntType __b, size_t __t, _UIntType __c, size_t __l,
+            .            .          .                    .            .          .                    .            .           .           	   _UIntType __f>
+            .            .          .                    .            .          .                    .            .           .               void
+    5,008,015 ( 0.03%)   0          0            1,001,603 ( 0.08%)   0          0                    0            0           0               mersenne_twister_engine<_UIntType, __w, __n, __m, __r, __a, __u, __d,
+            .            .          .                    .            .          .                    .            .           .           			    __s, __b, __t, __c, __l, __f>::
+            .            .          .                    .            .          .                    .            .           .               _M_gen_rand(void)
+            .            .          .                    .            .          .                    .            .           .               {
+            .            .          .                    .            .          .                    .            .           .                 const _UIntType __upper_mask = (~_UIntType()) << __r;
+            .            .          .                    .            .          .                    .            .           .                 const _UIntType __lower_mask = ~__upper_mask;
+            .            .          .                    .            .          .                    .            .           .           
+  684,094,849 ( 4.42%)  72 ( 0.88%) 1 ( 0.04%)   1,001,603 ( 0.08%)   0          0                    0            0           0                 for (size_t __k = 0; __k < (__n - __m); ++__k)
+            .            .          .                    .            .          .                    .            .           .                   {
+  682,091,643 ( 4.41%)   2 ( 0.02%) 1 ( 0.04%)           0            0          0                    0            0           0           	  _UIntType __y = ((_M_x[__k] & __upper_mask)
+  682,091,643 ( 4.41%)   0          0          227,363,881 (17.66%) 109 ( 0.67%) 0                    0            0           0           			   | (_M_x[__k + 1] & __lower_mask));
+  909,455,524 ( 5.87%)   0          0          227,363,881 (17.66%)  13 ( 0.08%) 0          227,363,881 (17.84%)   0           0           	  _M_x[__k] = (_M_x[__k + __m] ^ (__y >> 1)
+  571,414,350 ( 3.69%)   0          0                    0            0          0                    0            0           0           		       ^ ((__y & 0x01) ? __a : 0));
+            .            .          .                    .            .          .                    .            .           .                   }
+            .            .          .                    .            .          .                    .            .           .           
+1,189,904,364 ( 7.68%)   0          0                    0            0          0                    0            0           0                 for (size_t __k = (__n - __m); __k < (__n - 1); ++__k)
+            .            .          .                    .            .          .                    .            .           .           	{
+1,189,904,364 ( 7.68%)   0          0                    0            0          0                    0            0           0           	  _UIntType __y = ((_M_x[__k] & __upper_mask)
+1,189,904,364 ( 7.68%)   0          0          396,634,788 (30.81%) 107 ( 0.66%) 0                    0            0           0           			   | (_M_x[__k + 1] & __lower_mask));
+1,586,539,152 (10.25%)   2 ( 0.02%) 1 ( 0.04%) 396,634,788 (30.81%)   0          0          396,634,788 (31.12%)   0           0           	  _M_x[__k] = (_M_x[__k + (__m - __n)] ^ (__y >> 1)
+  993,575,828 ( 6.42%)   0          0                    0            0          0                    0            0           0           		       ^ ((__y & 0x01) ? __a : 0));
+            .            .          .                    .            .          .                    .            .           .           	}
+            .            .          .                    .            .          .                    .            .           .           
+    3,004,809 ( 0.02%)   0          0            1,001,603 ( 0.08%)   0          0                    0            0           0                 _UIntType __y = ((_M_x[__n - 1] & __upper_mask)
+    2,003,206 ( 0.01%)   0          0            1,001,603 ( 0.08%)   0          0                    0            0           0           		       | (_M_x[0] & __lower_mask));
+    4,006,412 ( 0.03%)   0          0            1,001,603 ( 0.08%)   0          0            1,001,603 ( 0.08%)   0           0                 _M_x[__n - 1] = (_M_x[__m - 1] ^ (__y >> 1)
+    3,003,642 ( 0.02%)   0          0                    0            0          0                    0            0           0           		       ^ ((__y & 0x01) ? __a : 0));
+    1,001,603 ( 0.01%)   0          0                    0            0          0            1,001,603 ( 0.08%)   0           0                 _M_p = 0;
+    1,001,603 ( 0.01%)   0          0            1,001,603 ( 0.08%)   0          0                    0            0           0               }
+            .            .          .                    .            .          .                    .            .           .           
+            .            .          .                    .            .          .                    .            .           .             template<typename _UIntType, size_t __w,
+            .            .          .                    .            .          .                    .            .           .           	   size_t __n, size_t __m, size_t __r,
+            .            .          .                    .            .          .                    .            .           .           	   _UIntType __a, size_t __u, _UIntType __d, size_t __s,
+            .            .          .                    .            .          .                    .            .           .           	   _UIntType __b, size_t __t, _UIntType __c, size_t __l,
+            .            .          .                    .            .          .                    .            .           .           	   _UIntType __f>
+            .            .          .                    .            .          .                    .            .           .               void
+            .            .          .                    .            .          .                    .            .           .               mersenne_twister_engine<_UIntType, __w, __n, __m, __r, __a, __u, __d,
+-- line 430 ----------------------------------------
+-- line 447 ----------------------------------------
+            .            .          .                    .            .          .                    .            .           .               typename
+            .            .          .                    .            .          .                    .            .           .               mersenne_twister_engine<_UIntType, __w, __n, __m, __r, __a, __u, __d,
+            .            .          .                    .            .          .                    .            .           .           			    __s, __b, __t, __c, __l, __f>::result_type
+            .            .          .                    .            .          .                    .            .           .               mersenne_twister_engine<_UIntType, __w, __n, __m, __r, __a, __u, __d,
+            .            .          .                    .            .          .                    .            .           .           			    __s, __b, __t, __c, __l, __f>::
+            .            .          .                    .            .          .                    .            .           .               operator()()
+            .            .          .                    .            .          .                    .            .           .               {
+            .            .          .                    .            .          .                    .            .           .                 // Reload the vector - cost is O(n) amortized over n calls.
+    6,000,000 ( 0.04%)   3 ( 0.04%) 3 ( 0.12%)   2,000,000 ( 0.16%)   0          0                    0            0           0                 if (_M_p >= state_size)
+    1,001,603 ( 0.01%)   4 ( 0.05%) 2 ( 0.08%)           0            0          0            1,001,603 ( 0.08%)   0           0           	_M_gen_rand();
+            .            .          .                    .            .          .                    .            .           .           
+            .            .          .                    .            .          .                    .            .           .                 // Calculate o(x(i)).
+    8,003,206 ( 0.05%)   0          0            3,001,603 ( 0.23%) 250 ( 1.54%) 0            2,000,000 ( 0.16%)   0           0                 result_type __z = _M_x[_M_p++];
+    8,000,000 ( 0.05%)   0          0                    0            0          0                    0            0           0                 __z ^= (__z >> __u) & __d;
+    8,000,000 ( 0.05%)   0          0                    0            0          0                    0            0           0                 __z ^= (__z << __s) & __b;
+    8,000,000 ( 0.05%) 101 ( 1.24%) 1 ( 0.04%)           0            0          0                    0            0           0                 __z ^= (__z << __t) & __c;
+    6,000,000 ( 0.04%)   2 ( 0.02%) 1 ( 0.04%)           0            0          0                    0            0           0                 __z ^= (__z >> __l);
+            .            .          .                    .            .          .                    .            .           .           
+            .            .          .                    .            .          .                    .            .           .                 return __z;
+            .            .          .                    .            .          .                    .            .           .               }
+            .            .          .                    .            .          .                    .            .           .           
+            .            .          .                    .            .          .                    .            .           .             template<typename _UIntType, size_t __w,
+            .            .          .                    .            .          .                    .            .           .           	   size_t __n, size_t __m, size_t __r,
+            .            .          .                    .            .          .                    .            .           .           	   _UIntType __a, size_t __u, _UIntType __d, size_t __s,
+            .            .          .                    .            .          .                    .            .           .           	   _UIntType __b, size_t __t, _UIntType __c, size_t __l,
+-- line 471 ----------------------------------------
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /usr/include/c++/11/bits/uniform_int_dist.h
+--------------------------------------------------------------------------------
+Ir                  I1mr       ILmr       Dr                  D1mr       DLmr       Dw                  D1mw       DLmw       
+
+-- line 185 ----------------------------------------
+         .          .          .                   .          .          .                   .          .          .                 { return this->b(); }
+         .          .          .                   .          .          .                   .          .          .           
+         .          .          .                   .          .          .                   .          .          .                 /**
+         .          .          .                   .          .          .                   .          .          .                  * @brief Generating functions.
+         .          .          .                   .          .          .                   .          .          .                  */
+         .          .          .                   .          .          .                   .          .          .                 template<typename _UniformRandomBitGenerator>
+         .          .          .                   .          .          .                   .          .          .           	result_type
+         .          .          .                   .          .          .                   .          .          .           	operator()(_UniformRandomBitGenerator& __urng)
+ 7,000,000 ( 0.05%) 1 ( 0.01%) 1 ( 0.04%)          0          0          0           2,000,000 ( 0.16%) 0          0                   { return this->operator()(__urng, _M_param); }
+         .          .          .                   .          .          .                   .          .          .           
+         .          .          .                   .          .          .                   .          .          .                 template<typename _UniformRandomBitGenerator>
+         .          .          .                   .          .          .                   .          .          .           	result_type
+         .          .          .                   .          .          .                   .          .          .           	operator()(_UniformRandomBitGenerator& __urng,
+         .          .          .                   .          .          .                   .          .          .           		   const param_type& __p);
+         .          .          .                   .          .          .                   .          .          .           
+         .          .          .                   .          .          .                   .          .          .                 template<typename _ForwardIterator,
+         .          .          .                   .          .          .                   .          .          .           	       typename _UniformRandomBitGenerator>
+-- line 201 ----------------------------------------
+-- line 250 ----------------------------------------
+         .          .          .                   .          .          .                   .          .          .           	  static_assert(!_Up_traits::__is_signed, "U must be unsigned");
+         .          .          .                   .          .          .                   .          .          .           	  static_assert(!_Wp_traits::__is_signed, "W must be unsigned");
+         .          .          .                   .          .          .                   .          .          .           	  static_assert(_Wp_traits::__digits == (2 * _Up_traits::__digits),
+         .          .          .                   .          .          .                   .          .          .           			"W must be twice as wide as U");
+         .          .          .                   .          .          .                   .          .          .           
+         .          .          .                   .          .          .                   .          .          .           	  // reference: Fast Random Integer Generation in an Interval
+         .          .          .                   .          .          .                   .          .          .           	  // ACM Transactions on Modeling and Computer Simulation 29 (1), 2019
+         .          .          .                   .          .          .                   .          .          .           	  // https://arxiv.org/abs/1805.10941
+ 2,000,000 ( 0.01%) 0          0                   0          0          0                   0          0          0           	  _Wp __product = _Wp(__g()) * _Wp(__range);
+         .          .          .                   .          .          .                   .          .          .           	  _Up __low = _Up(__product);
+ 4,000,000 ( 0.03%) 0          0                   0          0          0                   0          0          0           	  if (__low < __range)
+         .          .          .                   .          .          .                   .          .          .           	    {
+         .          .          .                   .          .          .                   .          .          .           	      _Up __threshold = -__range % __range;
+         .          .          .                   .          .          .                   .          .          .           	      while (__low < __threshold)
+         .          .          .                   .          .          .                   .          .          .           		{
+         .          .          .                   .          .          .                   .          .          .           		  __product = _Wp(__g()) * _Wp(__range);
+         .          .          .                   .          .          .                   .          .          .           		  __low = _Up(__product);
+         .          .          .                   .          .          .                   .          .          .           		}
+         .          .          .                   .          .          .                   .          .          .           	    }
+ 4,000,000 ( 0.03%) 4 ( 0.05%) 2 ( 0.08%)          0          0          0                   0          0          0           	  return __product >> _Up_traits::__digits;
+         .          .          .                   .          .          .                   .          .          .           	}
+         .          .          .                   .          .          .                   .          .          .               };
+         .          .          .                   .          .          .                   .          .          .           
+         .          .          .                   .          .          .                   .          .          .             template<typename _IntType>
+         .          .          .                   .          .          .                   .          .          .               template<typename _UniformRandomBitGenerator>
+         .          .          .                   .          .          .                   .          .          .                 typename uniform_int_distribution<_IntType>::result_type
+20,000,000 ( 0.13%) 4 ( 0.05%) 2 ( 0.08%)          0          0          0          12,000,000 ( 0.94%) 1 ( 0.04%) 1 ( 0.06%)        uniform_int_distribution<_IntType>::
+         .          .          .                   .          .          .                   .          .          .                 operator()(_UniformRandomBitGenerator& __urng,
+         .          .          .                   .          .          .                   .          .          .           		 const param_type& __param)
+         .          .          .                   .          .          .                   .          .          .                 {
+         .          .          .                   .          .          .                   .          .          .           	typedef typename _UniformRandomBitGenerator::result_type _Gresult_type;
+         .          .          .                   .          .          .                   .          .          .           	typedef typename make_unsigned<result_type>::type __utype;
+         .          .          .                   .          .          .                   .          .          .           	typedef typename common_type<_Gresult_type, __utype>::type __uctype;
+         .          .          .                   .          .          .                   .          .          .           
+         .          .          .                   .          .          .                   .          .          .           	constexpr __uctype __urngmin = _UniformRandomBitGenerator::min();
+         .          .          .                   .          .          .                   .          .          .           	constexpr __uctype __urngmax = _UniformRandomBitGenerator::max();
+         .          .          .                   .          .          .                   .          .          .           	static_assert( __urngmin < __urngmax,
+         .          .          .                   .          .          .                   .          .          .           	    "Uniform random bit generator must define min() < max()");
+         .          .          .                   .          .          .                   .          .          .           	constexpr __uctype __urngrange = __urngmax - __urngmin;
+         .          .          .                   .          .          .                   .          .          .           
+ 2,000,000 ( 0.01%) 0          0                   0          0          0                   0          0          0           	const __uctype __urange
+ 2,000,000 ( 0.01%) 0          0                   0          0          0                   0          0          0           	  = __uctype(__param.b()) - __uctype(__param.a());
+         .          .          .                   .          .          .                   .          .          .           
+         .          .          .                   .          .          .                   .          .          .           	__uctype __ret;
+ 6,000,000 ( 0.04%) 0          0                   0          0          0                   0          0          0           	if (__urngrange > __urange)
+         .          .          .                   .          .          .                   .          .          .           	  {
+         .          .          .                   .          .          .                   .          .          .           	    // downscaling
+         .          .          .                   .          .          .                   .          .          .           
+ 2,000,000 ( 0.01%) 1 ( 0.01%) 1 ( 0.04%)          0          0          0                   0          0          0           	    const __uctype __uerange = __urange + 1; // __urange can be zero
+         .          .          .                   .          .          .                   .          .          .           
+         .          .          .                   .          .          .                   .          .          .           #if defined __UINT64_TYPE__ && defined __UINT32_TYPE__
+         .          .          .                   .          .          .                   .          .          .           #if __SIZEOF_INT128__
+         .          .          .                   .          .          .                   .          .          .           	    if _GLIBCXX17_CONSTEXPR (__urngrange == __UINT64_MAX__)
+         .          .          .                   .          .          .                   .          .          .           	      {
+         .          .          .                   .          .          .                   .          .          .           		// __urng produces values that use exactly 64-bits,
+         .          .          .                   .          .          .                   .          .          .           		// so use 128-bit integers to downscale to desired range.
+         .          .          .                   .          .          .                   .          .          .           		__UINT64_TYPE__ __u64erange = __uerange;
+-- line 306 ----------------------------------------
+-- line 307 ----------------------------------------
+         .          .          .                   .          .          .                   .          .          .           		__ret = _S_nd<unsigned __int128>(__urng, __u64erange);
+         .          .          .                   .          .          .                   .          .          .           	      }
+         .          .          .                   .          .          .                   .          .          .           	    else
+         .          .          .                   .          .          .                   .          .          .           #endif
+         .          .          .                   .          .          .                   .          .          .           	    if _GLIBCXX17_CONSTEXPR (__urngrange == __UINT32_MAX__)
+         .          .          .                   .          .          .                   .          .          .           	      {
+         .          .          .                   .          .          .                   .          .          .           		// __urng produces values that use exactly 32-bits,
+         .          .          .                   .          .          .                   .          .          .           		// so use 64-bit integers to downscale to desired range.
+ 2,000,000 ( 0.01%) 0          0                   0          0          0                   0          0          0           		__UINT32_TYPE__ __u32erange = __uerange;
+         .          .          .                   .          .          .                   .          .          .           		__ret = _S_nd<__UINT64_TYPE__>(__urng, __u32erange);
+         .          .          .                   .          .          .                   .          .          .           	      }
+         .          .          .                   .          .          .                   .          .          .           	    else
+         .          .          .                   .          .          .                   .          .          .           #endif
+         .          .          .                   .          .          .                   .          .          .           	      {
+         .          .          .                   .          .          .                   .          .          .           		// fallback case (2 divisions)
+         .          .          .                   .          .          .                   .          .          .           		const __uctype __scaling = __urngrange / __uerange;
+         .          .          .                   .          .          .                   .          .          .           		const __uctype __past = __uerange * __scaling;
+-- line 323 ----------------------------------------
+-- line 352 ----------------------------------------
+         .          .          .                   .          .          .                   .          .          .           			 (__urng, param_type(0, __urange / __uerngrange)));
+         .          .          .                   .          .          .                   .          .          .           		__ret = __tmp + (__uctype(__urng()) - __urngmin);
+         .          .          .                   .          .          .                   .          .          .           	      }
+         .          .          .                   .          .          .                   .          .          .           	    while (__ret > __urange || __ret < __tmp);
+         .          .          .                   .          .          .                   .          .          .           	  }
+         .          .          .                   .          .          .                   .          .          .           	else
+         .          .          .                   .          .          .                   .          .          .           	  __ret = __uctype(__urng()) - __urngmin;
+         .          .          .                   .          .          .                   .          .          .           
+ 2,000,000 ( 0.01%) 0          0                   0          0          0                   0          0          0           	return __ret + __param.a();
+16,000,000 ( 0.10%) 0          0          14,000,000 ( 1.09%) 0          0                   0          0          0                 }
+         .          .          .                   .          .          .                   .          .          .           
+         .          .          .                   .          .          .                   .          .          .           
+         .          .          .                   .          .          .                   .          .          .             template<typename _IntType>
+         .          .          .                   .          .          .                   .          .          .               template<typename _ForwardIterator,
+         .          .          .                   .          .          .                   .          .          .           	     typename _UniformRandomBitGenerator>
+         .          .          .                   .          .          .                   .          .          .                 void
+         .          .          .                   .          .          .                   .          .          .                 uniform_int_distribution<_IntType>::
+         .          .          .                   .          .          .                   .          .          .                 __generate_impl(_ForwardIterator __f, _ForwardIterator __t,
+-- line 369 ----------------------------------------
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /home/juanmillan/Documents/UNAL/HPC/ProyectoIntermedio/HPC-Coffee/modulacion/Walk.cpp
+--------------------------------------------------------------------------------
+Ir                  I1mr       ILmr       Dr                 D1mr        DLmr       Dw                 D1mw       DLmw       
+
+         .          .          .                  .           .          .                  .          .          .           #include "Walk.hpp"
+         .          .          .                  .           .          .                  .          .          .           
+11,000,000 ( 0.07%) 2 ( 0.02%) 2 ( 0.08%) 2,000,000 ( 0.16%)  2 ( 0.01%) 1 ( 0.01%) 3,000,000 ( 0.24%) 0          0           void move(Coffee & cup, int N,int seed,int L){
+         .          .          .                  .           .          .                  .          .          .               std::mt19937 gen(seed);
+         .          .          .                  .           .          .                  .          .          .               std::uniform_int_distribution<> dis(0, 3);
+ 4,747,679 ( 0.03%) 0          0                  0           0          0                  0          0          0               switch (dis(gen))
+         .          .          .                  .           .          .                  .          .          .               {
+         .          .          .                  .           .          .                  .          .          .               case 0: 
+   748,440 ( 0.00%) 0          0            249,480 ( 0.02%) 42 ( 0.26%) 0                  0          0          0               if (cup.x()<L-1)
+   997,848 ( 0.01%) 0          0                  0           0          0            249,462 ( 0.02%) 0          0               { cup.move_x(true);};break;
+         .          .          .                  .           .          .                  .          .          .               case 1:
+   750,607 ( 0.00%) 0          0            250,194 ( 0.02%) 47 ( 0.29%) 0                  0          0          0               if (cup.x()>-L+1)
+ 1,000,676 ( 0.01%) 0          0                  0           0          0            250,169 ( 0.02%) 0          0               { cup.move_x(false);};break;
+         .          .          .                  .           .          .                  .          .          .               case 2:
+   752,709 ( 0.00%) 2 ( 0.02%) 2 ( 0.08%)   250,903 ( 0.02%) 48 ( 0.30%) 0                  0          0          0               if (cup.y()<L-1)
+ 1,003,372 ( 0.01%) 0          0                  0           0          0            250,843 ( 0.02%) 0          0               { cup.move_y(true);};break;
+         .          .          .                  .           .          .                  .          .          .               case 3: 
+   997,692 ( 0.01%) 0          0            249,423 ( 0.02%) 42 ( 0.26%) 0                  0          0          0               if (cup.y()>-L+1)
+   748,164 ( 0.00%) 0          0                  0           0          0            249,388 ( 0.02%) 0          0               { cup.move_y(false);};break;
+         .          .          .                  .           .          .                  .          .          .               }
+ 7,249,388 ( 0.05%) 0          0          5,000,000 ( 0.39%)  0          0                  0          0          0           }
+        12 ( 0.00%) 1 ( 0.01%) 1 ( 0.04%)         0           0          0                  6 ( 0.00%) 0          0           void inicial(std::vector<Coffee> & cup,int N){
+         1 ( 0.00%) 0          0                  0           0          0                  0          0          0               int largo =std::sqrt(N);
+       176 ( 0.00%) 0          0                 95 ( 0.00%)  0          0                  2 ( 0.00%) 0          0               for (int i = 0; i < largo-1; i++){
+     1,444 ( 0.00%) 0          0                  0           0          0                  0          0          0                   for (int j = 0; j < largo-1; j++)
+         .          .          .                  .           .          .                  .          .          .                   {
+     1,133 ( 0.00%) 2 ( 0.02%) 2 ( 0.08%)        38 ( 0.00%)  0          0                363 ( 0.00%) 0          0                       cup[j*largo+i].load(i-largo/2+1,j-largo/2+1);
+         .          .          .                  .           .          .                  .          .          .                   }
+         .          .          .                  .           .          .                  .          .          .               }
+         8 ( 0.00%) 0          0                  7 ( 0.00%)  0          0                  0          0          0           }
+
+--------------------------------------------------------------------------------
+-- User-annotated source: cachegrind.out.8923
+--------------------------------------------------------------------------------
+  No information has been collected for cachegrind.out.8923
+
+--------------------------------------------------------------------------------
+Ir                      I1mr         ILmr        Dr                     D1mr         DLmr       Dw                     D1mw         DLmw        
+--------------------------------------------------------------------------------
+15,455,015,143 (99.81%) 207 ( 2.53%) 27 ( 1.08%) 1,281,008,700 (99.52%) 660 ( 4.08%) 1 ( 0.01%) 1,272,004,336 (99.81%) 224 ( 7.88%) 50 ( 2.87%)  events annotated
+

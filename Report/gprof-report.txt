@@ -1,0 +1,1009 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 48.50      3.56     3.56   500802     0.01     0.01  std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand()
+ 16.89      4.80     1.24   500001     0.00     0.01  std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::seed(unsigned long)
+ 12.33      5.71     0.91 311500623     0.00     0.00  std::__detail::_Mod<unsigned long, 624ul, 1ul, 0ul, true, true>::__calc(unsigned long)
+  8.38      6.32     0.61 312000624     0.00     0.00  std::__detail::_Mod<unsigned long, 4294967296ul, 1ul, 0ul, true, true>::__calc(unsigned long)
+  6.20      6.78     0.46 311500623     0.00     0.00  unsigned long std::__detail::__mod<unsigned long, 624ul, 1ul, 0ul>(unsigned long)
+  5.45      7.17     0.40 312000624     0.00     0.00  unsigned long std::__detail::__mod<unsigned long, 4294967296ul, 1ul, 0ul>(unsigned long)
+  1.02      7.25     0.07  1000000     0.00     0.00  std::uniform_int_distribution<int>::param_type::b() const
+  0.27      7.27     0.02  1000000     0.00     0.00  int std::uniform_int_distribution<int>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_int_distribution<int>::param_type const&)
+  0.27      7.29     0.02        1    20.00    20.00  void std::_Destroy<Coffee*>(Coffee*, Coffee*)
+  0.14      7.30     0.01  1000000     0.00     0.00  std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()()
+  0.14      7.31     0.01   270285     0.00     0.00  Coffee::y()
+  0.14      7.32     0.01   269715     0.00     0.00  Coffee::x()
+  0.14      7.33     0.01        1    10.00    10.00  __gnu_cxx::__enable_if<std::__is_integer<int>::__value, double>::__type std::sqrt<int>(int)
+  0.14      7.34     0.01                             main
+  0.00      7.34     0.00  2000000     0.00     0.00  std::uniform_int_distribution<int>::param_type::a() const
+  0.00      7.34     0.00  1000000     0.00     0.00  unsigned int std::uniform_int_distribution<int>::_S_nd<unsigned long, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>, unsigned int>(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, unsigned int)
+  0.00      7.34     0.00  1000000     0.00     0.00  int std::uniform_int_distribution<int>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+  0.00      7.34     0.00   560361     0.00     0.00  std::vector<Coffee, std::allocator<Coffee> >::operator[](unsigned long)
+  0.00      7.34     0.00   500001     0.00     0.01  std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::mersenne_twister_engine(unsigned long)
+  0.00      7.34     0.00   500001     0.00     0.00  std::uniform_int_distribution<int>::param_type::param_type(int, int)
+  0.00      7.34     0.00   500001     0.00     0.00  std::uniform_int_distribution<int>::uniform_int_distribution(int, int)
+  0.00      7.34     0.00   500000     0.00     0.01  move(Coffee&, int, int, int)
+  0.00      7.34     0.00   250285     0.00     0.00  Coffee::move_y(bool)
+  0.00      7.34     0.00   249715     0.00     0.00  Coffee::move_x(bool)
+  0.00      7.34     0.00    47936     0.00     0.00  std::vector<double, std::allocator<double> >::operator[](unsigned long)
+  0.00      7.34     0.00    20000     0.00     0.00  Coffee::r()
+  0.00      7.34     0.00      404     0.00     0.00  operator new(unsigned long, void*)
+  0.00      7.34     0.00      400     0.00     0.00  Coffee::Coffee()
+  0.00      7.34     0.00      400     0.00     0.00  void std::_Construct<Coffee>(Coffee*)
+  0.00      7.34     0.00      400     0.00     0.00  Coffee* std::__addressof<Coffee>(Coffee&)
+  0.00      7.34     0.00      361     0.00     0.00  Coffee::load(int, int)
+  0.00      7.34     0.00      300     0.00     0.00  __gnu_cxx::new_allocator<double>::~new_allocator()
+  0.00      7.34     0.00      300     0.00     0.00  std::allocator<double>::~allocator()
+  0.00      7.34     0.00      200     0.00     0.00  __gnu_cxx::new_allocator<double>::new_allocator(__gnu_cxx::new_allocator<double> const&)
+  0.00      7.34     0.00      200     0.00     0.00  __gnu_cxx::new_allocator<double>::_M_max_size() const
+  0.00      7.34     0.00      200     0.00     0.00  std::allocator<double>::allocator(std::allocator<double> const&)
+  0.00      7.34     0.00      200     0.00     0.00  std::_Vector_base<double, std::allocator<double> >::_M_get_Tp_allocator()
+  0.00      7.34     0.00      107     0.00     0.00  unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&)
+  0.00      7.34     0.00      100     0.00     0.00  __gnu_cxx::new_allocator<double>::deallocate(double*, unsigned long)
+  0.00      7.34     0.00      100     0.00     0.00  __gnu_cxx::new_allocator<double>::allocate(unsigned long, void const*)
+  0.00      7.34     0.00      100     0.00     0.00  __gnu_cxx::new_allocator<double>::new_allocator()
+  0.00      7.34     0.00      100     0.00     0.00  __gnu_cxx::new_allocator<double>::max_size() const
+  0.00      7.34     0.00      100     0.00     0.00  std::allocator<double>::allocator()
+  0.00      7.34     0.00      100     0.00     0.00  void std::_Destroy_aux<true>::__destroy<double*>(double*, double*)
+  0.00      7.34     0.00      100     0.00     0.00  std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long)
+  0.00      7.34     0.00      100     0.00     0.00  std::_Vector_base<double, std::allocator<double> >::_Vector_impl::_Vector_impl(std::allocator<double> const&)
+  0.00      7.34     0.00      100     0.00     0.00  std::_Vector_base<double, std::allocator<double> >::_Vector_impl::~_Vector_impl()
+  0.00      7.34     0.00      100     0.00     0.00  std::_Vector_base<double, std::allocator<double> >::_M_deallocate(double*, unsigned long)
+  0.00      7.34     0.00      100     0.00     0.00  std::_Vector_base<double, std::allocator<double> >::_M_create_storage(unsigned long)
+  0.00      7.34     0.00      100     0.00     0.00  std::_Vector_base<double, std::allocator<double> >::_Vector_impl_data::_Vector_impl_data()
+  0.00      7.34     0.00      100     0.00     0.00  std::_Vector_base<double, std::allocator<double> >::_Vector_base(unsigned long, std::allocator<double> const&)
+  0.00      7.34     0.00      100     0.00     0.00  std::_Vector_base<double, std::allocator<double> >::~_Vector_base()
+  0.00      7.34     0.00      100     0.00     0.00  std::allocator_traits<std::allocator<double> >::deallocate(std::allocator<double>&, double*, unsigned long)
+  0.00      7.34     0.00      100     0.00     0.00  std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long)
+  0.00      7.34     0.00      100     0.00     0.00  std::allocator_traits<std::allocator<double> >::max_size(std::allocator<double> const&)
+  0.00      7.34     0.00      100     0.00     0.00  double* std::__uninitialized_fill_n<true>::__uninit_fill_n<double*, unsigned long, double>(double*, unsigned long, double const&)
+  0.00      7.34     0.00      100     0.00     0.00  std::vector<double, std::allocator<double> >::_S_max_size(std::allocator<double> const&)
+  0.00      7.34     0.00      100     0.00     0.00  std::vector<double, std::allocator<double> >::_S_check_init_len(unsigned long, std::allocator<double> const&)
+  0.00      7.34     0.00      100     0.00     0.00  std::vector<double, std::allocator<double> >::_M_fill_initialize(unsigned long, double const&)
+  0.00      7.34     0.00      100     0.00     0.00  std::vector<double, std::allocator<double> >::vector(unsigned long, double const&, std::allocator<double> const&)
+  0.00      7.34     0.00      100     0.00     0.00  std::vector<double, std::allocator<double> >::~vector()
+  0.00      7.34     0.00      100     0.00     0.00  double* std::__fill_n_a<double*, unsigned long, double>(double*, unsigned long, double const&, std::random_access_iterator_tag)
+  0.00      7.34     0.00      100     0.00     0.00  std::__size_to_integer(unsigned long)
+  0.00      7.34     0.00      100     0.00     0.00  std::iterator_traits<double*>::iterator_category std::__iterator_category<double*>(double* const&)
+  0.00      7.34     0.00      100     0.00     0.00  double* std::uninitialized_fill_n<double*, unsigned long, double>(double*, unsigned long, double const&)
+  0.00      7.34     0.00      100     0.00     0.00  double* std::__uninitialized_fill_n_a<double*, unsigned long, double, double>(double*, unsigned long, double const&, std::allocator<double>&)
+  0.00      7.34     0.00      100     0.00     0.00  double* std::fill_n<double*, unsigned long, double>(double*, unsigned long, double const&)
+  0.00      7.34     0.00      100     0.00     0.00  void std::_Destroy<double*>(double*, double*)
+  0.00      7.34     0.00      100     0.00     0.00  void std::_Destroy<double*, double>(double*, double*, std::allocator<double>&)
+  0.00      7.34     0.00      100     0.00     0.00  void std::__fill_a<double*, double>(double*, double*, double const&)
+  0.00      7.34     0.00      100     0.00     0.00  __gnu_cxx::__enable_if<std::__is_scalar<double>::__value, void>::__type std::__fill_a1<double*, double>(double*, double*, double const&)
+  0.00      7.34     0.00       50     0.00     0.03  calculos(std::vector<Coffee, std::allocator<Coffee> >&, int, int, int)
+  0.00      7.34     0.00       18     0.00     0.00  int* std::__niter_base<int*>(int*)
+  0.00      7.34     0.00       12     0.00     0.00  __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >::base() const
+  0.00      7.34     0.00       12     0.00     0.00  std::vector<int, std::allocator<int> >::size() const
+  0.00      7.34     0.00       11     0.00     0.00  int const& std::forward<int const&>(std::remove_reference<int const&>::type&)
+  0.00      7.34     0.00        9     0.00     0.00  __gnu_cxx::new_allocator<int>::_M_max_size() const
+  0.00      7.34     0.00        7     0.00     0.00  std::_Vector_base<int, std::allocator<int> >::_M_get_Tp_allocator()
+  0.00      7.34     0.00        6     0.00     0.00  __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >::__normal_iterator(int* const&)
+  0.00      7.34     0.00        6     0.00     0.00  __gnu_cxx::new_allocator<int>::max_size() const
+  0.00      7.34     0.00        6     0.00     0.00  std::_Vector_base<int, std::allocator<int> >::_M_get_Tp_allocator() const
+  0.00      7.34     0.00        6     0.00     0.00  std::vector<int, std::allocator<int> >::max_size() const
+  0.00      7.34     0.00        6     0.00     0.00  std::allocator_traits<std::allocator<int> >::max_size(std::allocator<int> const&)
+  0.00      7.34     0.00        6     0.00     0.00  std::vector<int, std::allocator<int> >::_S_max_size(std::allocator<int> const&)
+  0.00      7.34     0.00        6     0.00     0.00  std::vector<int, std::allocator<int> >::_S_relocate(int*, int*, int*, std::allocator<int>&)
+  0.00      7.34     0.00        6     0.00     0.00  std::vector<int, std::allocator<int> >::_S_do_relocate(int*, int*, int*, std::allocator<int>&, std::integral_constant<bool, true>)
+  0.00      7.34     0.00        6     0.00     0.00  int* std::__relocate_a<int*, int*, std::allocator<int> >(int*, int*, int*, std::allocator<int>&)
+  0.00      7.34     0.00        6     0.00     0.00  std::enable_if<std::__is_bitwise_relocatable<int, void>::value, int*>::type std::__relocate_a_1<int, int>(int*, int*, int*, std::allocator<int>&)
+  0.00      7.34     0.00        4     0.00     0.00  void __gnu_cxx::new_allocator<int>::construct<int, int const&>(int*, int const&)
+  0.00      7.34     0.00        4     0.00     0.00  std::_Vector_base<int, std::allocator<int> >::_M_deallocate(int*, unsigned long)
+  0.00      7.34     0.00        4     0.00     0.00  void std::allocator_traits<std::allocator<int> >::construct<int, int const&>(std::allocator<int>&, int*, int const&)
+  0.00      7.34     0.00        4     0.00     0.00  std::vector<int, std::allocator<int> >::push_back(int const&)
+  0.00      7.34     0.00        4     0.00     0.00  std::vector<int, std::allocator<int> >::operator[](unsigned long)
+  0.00      7.34     0.00        3     0.00     0.00  __gnu_cxx::new_allocator<Coffee>::~new_allocator()
+  0.00      7.34     0.00        3     0.00     0.00  __gnu_cxx::new_allocator<int>::deallocate(int*, unsigned long)
+  0.00      7.34     0.00        3     0.00     0.00  __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*)
+  0.00      7.34     0.00        3     0.00     0.00  __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >::difference_type __gnu_cxx::operator-<int*, std::vector<int, std::allocator<int> > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > > const&, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > > const&)
+  0.00      7.34     0.00        3     0.00     0.00  std::vector<int, std::allocator<int> >::_M_check_len(unsigned long, char const*) const
+  0.00      7.34     0.00        3     0.00     0.00  std::allocator<Coffee>::~allocator()
+  0.00      7.34     0.00        3     0.00     0.00  std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long)
+  0.00      7.34     0.00        3     0.00     0.00  std::allocator_traits<std::allocator<int> >::deallocate(std::allocator<int>&, int*, unsigned long)
+  0.00      7.34     0.00        3     0.00     0.00  std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long)
+  0.00      7.34     0.00        3     0.00     0.00  void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&)
+  0.00      7.34     0.00        3     0.00     0.00  std::vector<int, std::allocator<int> >::end()
+  0.00      7.34     0.00        3     0.00     0.00  std::vector<int, std::allocator<int> >::begin()
+  0.00      7.34     0.00        3     0.00     0.00  unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&)
+  0.00      7.34     0.00        2     0.00     0.00  __gnu_cxx::new_allocator<Coffee>::new_allocator(__gnu_cxx::new_allocator<Coffee> const&)
+  0.00      7.34     0.00        2     0.00     0.00  __gnu_cxx::new_allocator<Coffee>::_M_max_size() const
+  0.00      7.34     0.00        2     0.00     0.00  std::allocator<Coffee>::allocator(std::allocator<Coffee> const&)
+  0.00      7.34     0.00        2     0.00     0.00  std::_Vector_base<Coffee, std::allocator<Coffee> >::_M_get_Tp_allocator()
+  0.00      7.34     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00      7.34     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00      7.34     0.00        1     0.00    10.00  inicial(std::vector<Coffee, std::allocator<Coffee> >&, int)
+  0.00      7.34     0.00        1     0.00     0.00  __gnu_cxx::new_allocator<Coffee>::deallocate(Coffee*, unsigned long)
+  0.00      7.34     0.00        1     0.00     0.00  __gnu_cxx::new_allocator<Coffee>::allocate(unsigned long, void const*)
+  0.00      7.34     0.00        1     0.00     0.00  __gnu_cxx::new_allocator<Coffee>::new_allocator()
+  0.00      7.34     0.00        1     0.00     0.00  __gnu_cxx::new_allocator<int>::new_allocator()
+  0.00      7.34     0.00        1     0.00     0.00  __gnu_cxx::new_allocator<int>::~new_allocator()
+  0.00      7.34     0.00        1     0.00     0.00  __gnu_cxx::new_allocator<Coffee>::max_size() const
+  0.00      7.34     0.00        1     0.00     0.00  std::allocator<Coffee>::allocator()
+  0.00      7.34     0.00        1     0.00     0.00  std::allocator<int>::allocator()
+  0.00      7.34     0.00        1     0.00     0.00  std::allocator<int>::~allocator()
+  0.00      7.34     0.00        1     0.00     0.00  void std::_Destroy_aux<true>::__destroy<Coffee*>(Coffee*, Coffee*)
+  0.00      7.34     0.00        1     0.00     0.00  void std::_Destroy_aux<true>::__destroy<int*>(int*, int*)
+  0.00      7.34     0.00        1     0.00     0.00  std::_Vector_base<Coffee, std::allocator<Coffee> >::_M_allocate(unsigned long)
+  0.00      7.34     0.00        1     0.00     0.00  std::_Vector_base<Coffee, std::allocator<Coffee> >::_Vector_impl::_Vector_impl(std::allocator<Coffee> const&)
+  0.00      7.34     0.00        1     0.00     0.00  std::_Vector_base<Coffee, std::allocator<Coffee> >::_Vector_impl::~_Vector_impl()
+  0.00      7.34     0.00        1     0.00     0.00  std::_Vector_base<Coffee, std::allocator<Coffee> >::_M_deallocate(Coffee*, unsigned long)
+  0.00      7.34     0.00        1     0.00     0.00  std::_Vector_base<Coffee, std::allocator<Coffee> >::_M_create_storage(unsigned long)
+  0.00      7.34     0.00        1     0.00     0.00  std::_Vector_base<Coffee, std::allocator<Coffee> >::_Vector_impl_data::_Vector_impl_data()
+  0.00      7.34     0.00        1     0.00     0.00  std::_Vector_base<Coffee, std::allocator<Coffee> >::_Vector_base(unsigned long, std::allocator<Coffee> const&)
+  0.00      7.34     0.00        1     0.00     0.00  std::_Vector_base<Coffee, std::allocator<Coffee> >::~_Vector_base()
+  0.00      7.34     0.00        1     0.00     0.00  std::_Vector_base<int, std::allocator<int> >::_Vector_impl::_Vector_impl()
+  0.00      7.34     0.00        1     0.00     0.00  std::_Vector_base<int, std::allocator<int> >::_Vector_impl::~_Vector_impl()
+  0.00      7.34     0.00        1     0.00     0.00  std::_Vector_base<int, std::allocator<int> >::_Vector_impl_data::_Vector_impl_data()
+  0.00      7.34     0.00        1     0.00     0.00  std::_Vector_base<int, std::allocator<int> >::_Vector_base()
+  0.00      7.34     0.00        1     0.00     0.00  std::_Vector_base<int, std::allocator<int> >::~_Vector_base()
+  0.00      7.34     0.00        1     0.00     0.00  std::allocator_traits<std::allocator<Coffee> >::deallocate(std::allocator<Coffee>&, Coffee*, unsigned long)
+  0.00      7.34     0.00        1     0.00     0.00  std::allocator_traits<std::allocator<Coffee> >::allocate(std::allocator<Coffee>&, unsigned long)
+  0.00      7.34     0.00        1     0.00     0.00  std::allocator_traits<std::allocator<Coffee> >::max_size(std::allocator<Coffee> const&)
+  0.00      7.34     0.00        1     0.00     0.00  Coffee* std::__uninitialized_default_n_1<false>::__uninit_default_n<Coffee*, unsigned long>(Coffee*, unsigned long)
+  0.00      7.34     0.00        1     0.00     0.00  std::vector<Coffee, std::allocator<Coffee> >::_S_max_size(std::allocator<Coffee> const&)
+  0.00      7.34     0.00        1     0.00     0.00  std::vector<Coffee, std::allocator<Coffee> >::_S_check_init_len(unsigned long, std::allocator<Coffee> const&)
+  0.00      7.34     0.00        1     0.00     0.00  std::vector<Coffee, std::allocator<Coffee> >::_M_default_initialize(unsigned long)
+  0.00      7.34     0.00        1     0.00     0.00  std::vector<Coffee, std::allocator<Coffee> >::vector(unsigned long, std::allocator<Coffee> const&)
+  0.00      7.34     0.00        1     0.00    20.00  std::vector<Coffee, std::allocator<Coffee> >::~vector()
+  0.00      7.34     0.00        1     0.00     0.00  std::vector<int, std::allocator<int> >::vector()
+  0.00      7.34     0.00        1     0.00     0.00  std::vector<int, std::allocator<int> >::~vector()
+  0.00      7.34     0.00        1     0.00     0.00  Coffee* std::__uninitialized_default_n<Coffee*, unsigned long>(Coffee*, unsigned long)
+  0.00      7.34     0.00        1     0.00     0.00  Coffee* std::__uninitialized_default_n_a<Coffee*, unsigned long, Coffee>(Coffee*, unsigned long, std::allocator<Coffee>&)
+  0.00      7.34     0.00        1     0.00    20.00  void std::_Destroy<Coffee*, Coffee>(Coffee*, Coffee*, std::allocator<Coffee>&)
+  0.00      7.34     0.00        1     0.00     0.00  void std::_Destroy<int*>(int*, int*)
+  0.00      7.34     0.00        1     0.00     0.00  void std::_Destroy<int*, int>(int*, int*, std::allocator<int>&)
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2022 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 4 byte(s) for 0.14% of 7.34 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]    100.0    0.01    7.33                 main [1]
+                0.00    5.47  500000/500000      move(Coffee&, int, int, int) [2]
+                0.00    1.83  500000/1000000     int std::uniform_int_distribution<int>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&) [3]
+                0.00    0.02       1/1           std::vector<Coffee, std::allocator<Coffee> >::~vector() [15]
+                0.00    0.01       1/1           inicial(std::vector<Coffee, std::allocator<Coffee> >&, int) [20]
+                0.00    0.00      50/50          calculos(std::vector<Coffee, std::allocator<Coffee> >&, int, int, int) [22]
+                0.00    0.00       1/500001      std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::mersenne_twister_engine(unsigned long) [6]
+                0.00    0.00  500000/560361      std::vector<Coffee, std::allocator<Coffee> >::operator[](unsigned long) [30]
+                0.00    0.00     100/47936       std::vector<double, std::allocator<double> >::operator[](unsigned long) [35]
+                0.00    0.00      50/100         std::vector<double, std::allocator<double> >::~vector() [71]
+                0.00    0.00       4/4           std::vector<int, std::allocator<int> >::push_back(int const&) [101]
+                0.00    0.00       4/4           std::vector<int, std::allocator<int> >::operator[](unsigned long) [102]
+                0.00    0.00       1/1           std::vector<int, std::allocator<int> >::vector() [154]
+                0.00    0.00       1/1           std::allocator<Coffee>::allocator() [128]
+                0.00    0.00       1/1           std::vector<Coffee, std::allocator<Coffee> >::vector(unsigned long, std::allocator<Coffee> const&) [153]
+                0.00    0.00       1/3           std::allocator<Coffee>::~allocator() [108]
+                0.00    0.00       1/500001      std::uniform_int_distribution<int>::uniform_int_distribution(int, int) [32]
+                0.00    0.00       1/1           std::vector<int, std::allocator<int> >::~vector() [155]
+-----------------------------------------------
+                0.00    5.47  500000/500000      main [1]
+[2]     74.5    0.00    5.47  500000         move(Coffee&, int, int, int) [2]
+                0.00    3.61  500000/500001      std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::mersenne_twister_engine(unsigned long) [6]
+                0.00    1.83  500000/1000000     int std::uniform_int_distribution<int>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&) [3]
+                0.01    0.00  250285/270285      Coffee::y() [18]
+                0.01    0.00  249715/269715      Coffee::x() [19]
+                0.00    0.00  500000/500001      std::uniform_int_distribution<int>::uniform_int_distribution(int, int) [32]
+                0.00    0.00  250285/250285      Coffee::move_y(bool) [33]
+                0.00    0.00  249715/249715      Coffee::move_x(bool) [34]
+-----------------------------------------------
+                0.00    1.83  500000/1000000     main [1]
+                0.00    1.83  500000/1000000     move(Coffee&, int, int, int) [2]
+[3]     49.9    0.00    3.67 1000000         int std::uniform_int_distribution<int>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&) [3]
+                0.02    3.65 1000000/1000000     int std::uniform_int_distribution<int>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_int_distribution<int>::param_type const&) [4]
+-----------------------------------------------
+                0.02    3.65 1000000/1000000     int std::uniform_int_distribution<int>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&) [3]
+[4]     49.9    0.02    3.65 1000000         int std::uniform_int_distribution<int>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_int_distribution<int>::param_type const&) [4]
+                0.00    3.57 1000000/1000000     unsigned int std::uniform_int_distribution<int>::_S_nd<unsigned long, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>, unsigned int>(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, unsigned int) [8]
+                0.07    0.00 1000000/1000000     std::uniform_int_distribution<int>::param_type::b() const [14]
+                0.00    0.00 2000000/2000000     std::uniform_int_distribution<int>::param_type::a() const [29]
+-----------------------------------------------
+                1.24    2.38  500001/500001      std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::mersenne_twister_engine(unsigned long) [6]
+[5]     49.3    1.24    2.38  500001         std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::seed(unsigned long) [5]
+                0.46    0.91 311500623/311500623     unsigned long std::__detail::__mod<unsigned long, 624ul, 1ul, 0ul>(unsigned long) [10]
+                0.40    0.61 312000624/312000624     unsigned long std::__detail::__mod<unsigned long, 4294967296ul, 1ul, 0ul>(unsigned long) [11]
+-----------------------------------------------
+                0.00    0.00       1/500001      main [1]
+                0.00    3.61  500000/500001      move(Coffee&, int, int, int) [2]
+[6]     49.3    0.00    3.62  500001         std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::mersenne_twister_engine(unsigned long) [6]
+                1.24    2.38  500001/500001      std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::seed(unsigned long) [5]
+-----------------------------------------------
+                0.01    3.56 1000000/1000000     unsigned int std::uniform_int_distribution<int>::_S_nd<unsigned long, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>, unsigned int>(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, unsigned int) [8]
+[7]     48.6    0.01    3.56 1000000         std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()() [7]
+                3.56    0.00  500802/500802      std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand() [9]
+-----------------------------------------------
+                0.00    3.57 1000000/1000000     int std::uniform_int_distribution<int>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_int_distribution<int>::param_type const&) [4]
+[8]     48.6    0.00    3.57 1000000         unsigned int std::uniform_int_distribution<int>::_S_nd<unsigned long, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>, unsigned int>(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, unsigned int) [8]
+                0.01    3.56 1000000/1000000     std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()() [7]
+-----------------------------------------------
+                3.56    0.00  500802/500802      std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()() [7]
+[9]     48.5    3.56    0.00  500802         std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand() [9]
+-----------------------------------------------
+                0.46    0.91 311500623/311500623     std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::seed(unsigned long) [5]
+[10]    18.5    0.46    0.91 311500623         unsigned long std::__detail::__mod<unsigned long, 624ul, 1ul, 0ul>(unsigned long) [10]
+                0.91    0.00 311500623/311500623     std::__detail::_Mod<unsigned long, 624ul, 1ul, 0ul, true, true>::__calc(unsigned long) [12]
+-----------------------------------------------
+                0.40    0.61 312000624/312000624     std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::seed(unsigned long) [5]
+[11]    13.8    0.40    0.61 312000624         unsigned long std::__detail::__mod<unsigned long, 4294967296ul, 1ul, 0ul>(unsigned long) [11]
+                0.61    0.00 312000624/312000624     std::__detail::_Mod<unsigned long, 4294967296ul, 1ul, 0ul, true, true>::__calc(unsigned long) [13]
+-----------------------------------------------
+                0.91    0.00 311500623/311500623     unsigned long std::__detail::__mod<unsigned long, 624ul, 1ul, 0ul>(unsigned long) [10]
+[12]    12.3    0.91    0.00 311500623         std::__detail::_Mod<unsigned long, 624ul, 1ul, 0ul, true, true>::__calc(unsigned long) [12]
+-----------------------------------------------
+                0.61    0.00 312000624/312000624     unsigned long std::__detail::__mod<unsigned long, 4294967296ul, 1ul, 0ul>(unsigned long) [11]
+[13]     8.4    0.61    0.00 312000624         std::__detail::_Mod<unsigned long, 4294967296ul, 1ul, 0ul, true, true>::__calc(unsigned long) [13]
+-----------------------------------------------
+                0.07    0.00 1000000/1000000     int std::uniform_int_distribution<int>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_int_distribution<int>::param_type const&) [4]
+[14]     1.0    0.07    0.00 1000000         std::uniform_int_distribution<int>::param_type::b() const [14]
+-----------------------------------------------
+                0.00    0.02       1/1           main [1]
+[15]     0.3    0.00    0.02       1         std::vector<Coffee, std::allocator<Coffee> >::~vector() [15]
+                0.00    0.02       1/1           void std::_Destroy<Coffee*, Coffee>(Coffee*, Coffee*, std::allocator<Coffee>&) [17]
+                0.00    0.00       1/2           std::_Vector_base<Coffee, std::allocator<Coffee> >::_M_get_Tp_allocator() [119]
+                0.00    0.00       1/1           std::_Vector_base<Coffee, std::allocator<Coffee> >::~_Vector_base() [140]
+-----------------------------------------------
+                0.02    0.00       1/1           void std::_Destroy<Coffee*, Coffee>(Coffee*, Coffee*, std::allocator<Coffee>&) [17]
+[16]     0.3    0.02    0.00       1         void std::_Destroy<Coffee*>(Coffee*, Coffee*) [16]
+                0.00    0.00       1/1           void std::_Destroy_aux<true>::__destroy<Coffee*>(Coffee*, Coffee*) [131]
+-----------------------------------------------
+                0.00    0.02       1/1           std::vector<Coffee, std::allocator<Coffee> >::~vector() [15]
+[17]     0.3    0.00    0.02       1         void std::_Destroy<Coffee*, Coffee>(Coffee*, Coffee*, std::allocator<Coffee>&) [17]
+                0.02    0.00       1/1           void std::_Destroy<Coffee*>(Coffee*, Coffee*) [16]
+-----------------------------------------------
+                0.00    0.00   20000/270285      calculos(std::vector<Coffee, std::allocator<Coffee> >&, int, int, int) [22]
+                0.01    0.00  250285/270285      move(Coffee&, int, int, int) [2]
+[18]     0.1    0.01    0.00  270285         Coffee::y() [18]
+-----------------------------------------------
+                0.00    0.00   20000/269715      calculos(std::vector<Coffee, std::allocator<Coffee> >&, int, int, int) [22]
+                0.01    0.00  249715/269715      move(Coffee&, int, int, int) [2]
+[19]     0.1    0.01    0.00  269715         Coffee::x() [19]
+-----------------------------------------------
+                0.00    0.01       1/1           main [1]
+[20]     0.1    0.00    0.01       1         inicial(std::vector<Coffee, std::allocator<Coffee> >&, int) [20]
+                0.01    0.00       1/1           __gnu_cxx::__enable_if<std::__is_integer<int>::__value, double>::__type std::sqrt<int>(int) [21]
+                0.00    0.00     361/560361      std::vector<Coffee, std::allocator<Coffee> >::operator[](unsigned long) [30]
+                0.00    0.00     361/361         Coffee::load(int, int) [41]
+-----------------------------------------------
+                0.01    0.00       1/1           inicial(std::vector<Coffee, std::allocator<Coffee> >&, int) [20]
+[21]     0.1    0.01    0.00       1         __gnu_cxx::__enable_if<std::__is_integer<int>::__value, double>::__type std::sqrt<int>(int) [21]
+-----------------------------------------------
+                0.00    0.00      50/50          main [1]
+[22]     0.0    0.00    0.00      50         calculos(std::vector<Coffee, std::allocator<Coffee> >&, int, int, int) [22]
+                0.00    0.00   20000/269715      Coffee::x() [19]
+                0.00    0.00   20000/270285      Coffee::y() [18]
+                0.00    0.00   60000/560361      std::vector<Coffee, std::allocator<Coffee> >::operator[](unsigned long) [30]
+                0.00    0.00   47836/47936       std::vector<double, std::allocator<double> >::operator[](unsigned long) [35]
+                0.00    0.00   20000/20000       Coffee::r() [36]
+                0.00    0.00     100/100         std::allocator<double>::allocator() [53]
+                0.00    0.00     100/100         std::vector<double, std::allocator<double> >::vector(unsigned long, double const&, std::allocator<double> const&) [70]
+                0.00    0.00     100/300         std::allocator<double>::~allocator() [43]
+                0.00    0.00      50/100         std::vector<double, std::allocator<double> >::~vector() [71]
+-----------------------------------------------
+                0.00    0.00 2000000/2000000     int std::uniform_int_distribution<int>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_int_distribution<int>::param_type const&) [4]
+[29]     0.0    0.00    0.00 2000000         std::uniform_int_distribution<int>::param_type::a() const [29]
+-----------------------------------------------
+                0.00    0.00     361/560361      inicial(std::vector<Coffee, std::allocator<Coffee> >&, int) [20]
+                0.00    0.00   60000/560361      calculos(std::vector<Coffee, std::allocator<Coffee> >&, int, int, int) [22]
+                0.00    0.00  500000/560361      main [1]
+[30]     0.0    0.00    0.00  560361         std::vector<Coffee, std::allocator<Coffee> >::operator[](unsigned long) [30]
+-----------------------------------------------
+                0.00    0.00  500001/500001      std::uniform_int_distribution<int>::uniform_int_distribution(int, int) [32]
+[31]     0.0    0.00    0.00  500001         std::uniform_int_distribution<int>::param_type::param_type(int, int) [31]
+-----------------------------------------------
+                0.00    0.00       1/500001      main [1]
+                0.00    0.00  500000/500001      move(Coffee&, int, int, int) [2]
+[32]     0.0    0.00    0.00  500001         std::uniform_int_distribution<int>::uniform_int_distribution(int, int) [32]
+                0.00    0.00  500001/500001      std::uniform_int_distribution<int>::param_type::param_type(int, int) [31]
+-----------------------------------------------
+                0.00    0.00  250285/250285      move(Coffee&, int, int, int) [2]
+[33]     0.0    0.00    0.00  250285         Coffee::move_y(bool) [33]
+-----------------------------------------------
+                0.00    0.00  249715/249715      move(Coffee&, int, int, int) [2]
+[34]     0.0    0.00    0.00  249715         Coffee::move_x(bool) [34]
+-----------------------------------------------
+                0.00    0.00     100/47936       main [1]
+                0.00    0.00   47836/47936       calculos(std::vector<Coffee, std::allocator<Coffee> >&, int, int, int) [22]
+[35]     0.0    0.00    0.00   47936         std::vector<double, std::allocator<double> >::operator[](unsigned long) [35]
+-----------------------------------------------
+                0.00    0.00   20000/20000       calculos(std::vector<Coffee, std::allocator<Coffee> >&, int, int, int) [22]
+[36]     0.0    0.00    0.00   20000         Coffee::r() [36]
+-----------------------------------------------
+                0.00    0.00       4/404         void __gnu_cxx::new_allocator<int>::construct<int, int const&>(int*, int const&) [98]
+                0.00    0.00     400/404         void std::_Construct<Coffee>(Coffee*) [39]
+[37]     0.0    0.00    0.00     404         operator new(unsigned long, void*) [37]
+-----------------------------------------------
+                0.00    0.00     400/400         void std::_Construct<Coffee>(Coffee*) [39]
+[38]     0.0    0.00    0.00     400         Coffee::Coffee() [38]
+-----------------------------------------------
+                0.00    0.00     400/400         Coffee* std::__uninitialized_default_n_1<false>::__uninit_default_n<Coffee*, unsigned long>(Coffee*, unsigned long) [149]
+[39]     0.0    0.00    0.00     400         void std::_Construct<Coffee>(Coffee*) [39]
+                0.00    0.00     400/404         operator new(unsigned long, void*) [37]
+                0.00    0.00     400/400         Coffee::Coffee() [38]
+-----------------------------------------------
+                0.00    0.00     400/400         Coffee* std::__uninitialized_default_n_1<false>::__uninit_default_n<Coffee*, unsigned long>(Coffee*, unsigned long) [149]
+[40]     0.0    0.00    0.00     400         Coffee* std::__addressof<Coffee>(Coffee&) [40]
+-----------------------------------------------
+                0.00    0.00     361/361         inicial(std::vector<Coffee, std::allocator<Coffee> >&, int) [20]
+[41]     0.0    0.00    0.00     361         Coffee::load(int, int) [41]
+-----------------------------------------------
+                0.00    0.00     300/300         std::allocator<double>::~allocator() [43]
+[42]     0.0    0.00    0.00     300         __gnu_cxx::new_allocator<double>::~new_allocator() [42]
+-----------------------------------------------
+                0.00    0.00     100/300         std::_Vector_base<double, std::allocator<double> >::_Vector_impl::~_Vector_impl() [57]
+                0.00    0.00     100/300         calculos(std::vector<Coffee, std::allocator<Coffee> >&, int, int, int) [22]
+                0.00    0.00     100/300         std::vector<double, std::allocator<double> >::_S_check_init_len(unsigned long, std::allocator<double> const&) [68]
+[43]     0.0    0.00    0.00     300         std::allocator<double>::~allocator() [43]
+                0.00    0.00     300/300         __gnu_cxx::new_allocator<double>::~new_allocator() [42]
+-----------------------------------------------
+                0.00    0.00     200/200         std::allocator<double>::allocator(std::allocator<double> const&) [46]
+[44]     0.0    0.00    0.00     200         __gnu_cxx::new_allocator<double>::new_allocator(__gnu_cxx::new_allocator<double> const&) [44]
+-----------------------------------------------
+                0.00    0.00     100/200         __gnu_cxx::new_allocator<double>::max_size() const [52]
+                0.00    0.00     100/200         __gnu_cxx::new_allocator<double>::allocate(unsigned long, void const*) [50]
+[45]     0.0    0.00    0.00     200         __gnu_cxx::new_allocator<double>::_M_max_size() const [45]
+-----------------------------------------------
+                0.00    0.00     100/200         std::vector<double, std::allocator<double> >::_S_check_init_len(unsigned long, std::allocator<double> const&) [68]
+                0.00    0.00     100/200         std::_Vector_base<double, std::allocator<double> >::_Vector_impl::_Vector_impl(std::allocator<double> const&) [56]
+[46]     0.0    0.00    0.00     200         std::allocator<double>::allocator(std::allocator<double> const&) [46]
+                0.00    0.00     200/200         __gnu_cxx::new_allocator<double>::new_allocator(__gnu_cxx::new_allocator<double> const&) [44]
+-----------------------------------------------
+                0.00    0.00     100/200         std::vector<double, std::allocator<double> >::~vector() [71]
+                0.00    0.00     100/200         std::vector<double, std::allocator<double> >::_M_fill_initialize(unsigned long, double const&) [69]
+[47]     0.0    0.00    0.00     200         std::_Vector_base<double, std::allocator<double> >::_M_get_Tp_allocator() [47]
+-----------------------------------------------
+                0.00    0.00       1/107         std::vector<Coffee, std::allocator<Coffee> >::_S_max_size(std::allocator<Coffee> const&) [150]
+                0.00    0.00       6/107         std::vector<int, std::allocator<int> >::_S_max_size(std::allocator<int> const&) [93]
+                0.00    0.00     100/107         std::vector<double, std::allocator<double> >::_S_max_size(std::allocator<double> const&) [67]
+[48]     0.0    0.00    0.00     107         unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&) [48]
+-----------------------------------------------
+                0.00    0.00     100/100         std::allocator_traits<std::allocator<double> >::deallocate(std::allocator<double>&, double*, unsigned long) [63]
+[49]     0.0    0.00    0.00     100         __gnu_cxx::new_allocator<double>::deallocate(double*, unsigned long) [49]
+-----------------------------------------------
+                0.00    0.00     100/100         std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) [64]
+[50]     0.0    0.00    0.00     100         __gnu_cxx::new_allocator<double>::allocate(unsigned long, void const*) [50]
+                0.00    0.00     100/200         __gnu_cxx::new_allocator<double>::_M_max_size() const [45]
+-----------------------------------------------
+                0.00    0.00     100/100         std::allocator<double>::allocator() [53]
+[51]     0.0    0.00    0.00     100         __gnu_cxx::new_allocator<double>::new_allocator() [51]
+-----------------------------------------------
+                0.00    0.00     100/100         std::allocator_traits<std::allocator<double> >::max_size(std::allocator<double> const&) [65]
+[52]     0.0    0.00    0.00     100         __gnu_cxx::new_allocator<double>::max_size() const [52]
+                0.00    0.00     100/200         __gnu_cxx::new_allocator<double>::_M_max_size() const [45]
+-----------------------------------------------
+                0.00    0.00     100/100         calculos(std::vector<Coffee, std::allocator<Coffee> >&, int, int, int) [22]
+[53]     0.0    0.00    0.00     100         std::allocator<double>::allocator() [53]
+                0.00    0.00     100/100         __gnu_cxx::new_allocator<double>::new_allocator() [51]
+-----------------------------------------------
+                0.00    0.00     100/100         void std::_Destroy<double*>(double*, double*) [78]
+[54]     0.0    0.00    0.00     100         void std::_Destroy_aux<true>::__destroy<double*>(double*, double*) [54]
+-----------------------------------------------
+                0.00    0.00     100/100         std::_Vector_base<double, std::allocator<double> >::_M_create_storage(unsigned long) [59]
+[55]     0.0    0.00    0.00     100         std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) [55]
+                0.00    0.00     100/100         std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) [64]
+-----------------------------------------------
+                0.00    0.00     100/100         std::_Vector_base<double, std::allocator<double> >::_Vector_base(unsigned long, std::allocator<double> const&) [61]
+[56]     0.0    0.00    0.00     100         std::_Vector_base<double, std::allocator<double> >::_Vector_impl::_Vector_impl(std::allocator<double> const&) [56]
+                0.00    0.00     100/200         std::allocator<double>::allocator(std::allocator<double> const&) [46]
+                0.00    0.00     100/100         std::_Vector_base<double, std::allocator<double> >::_Vector_impl_data::_Vector_impl_data() [60]
+-----------------------------------------------
+                0.00    0.00     100/100         std::_Vector_base<double, std::allocator<double> >::~_Vector_base() [62]
+[57]     0.0    0.00    0.00     100         std::_Vector_base<double, std::allocator<double> >::_Vector_impl::~_Vector_impl() [57]
+                0.00    0.00     100/300         std::allocator<double>::~allocator() [43]
+-----------------------------------------------
+                0.00    0.00     100/100         std::_Vector_base<double, std::allocator<double> >::~_Vector_base() [62]
+[58]     0.0    0.00    0.00     100         std::_Vector_base<double, std::allocator<double> >::_M_deallocate(double*, unsigned long) [58]
+                0.00    0.00     100/100         std::allocator_traits<std::allocator<double> >::deallocate(std::allocator<double>&, double*, unsigned long) [63]
+-----------------------------------------------
+                0.00    0.00     100/100         std::_Vector_base<double, std::allocator<double> >::_Vector_base(unsigned long, std::allocator<double> const&) [61]
+[59]     0.0    0.00    0.00     100         std::_Vector_base<double, std::allocator<double> >::_M_create_storage(unsigned long) [59]
+                0.00    0.00     100/100         std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) [55]
+-----------------------------------------------
+                0.00    0.00     100/100         std::_Vector_base<double, std::allocator<double> >::_Vector_impl::_Vector_impl(std::allocator<double> const&) [56]
+[60]     0.0    0.00    0.00     100         std::_Vector_base<double, std::allocator<double> >::_Vector_impl_data::_Vector_impl_data() [60]
+-----------------------------------------------
+                0.00    0.00     100/100         std::vector<double, std::allocator<double> >::vector(unsigned long, double const&, std::allocator<double> const&) [70]
+[61]     0.0    0.00    0.00     100         std::_Vector_base<double, std::allocator<double> >::_Vector_base(unsigned long, std::allocator<double> const&) [61]
+                0.00    0.00     100/100         std::_Vector_base<double, std::allocator<double> >::_Vector_impl::_Vector_impl(std::allocator<double> const&) [56]
+                0.00    0.00     100/100         std::_Vector_base<double, std::allocator<double> >::_M_create_storage(unsigned long) [59]
+-----------------------------------------------
+                0.00    0.00     100/100         std::vector<double, std::allocator<double> >::~vector() [71]
+[62]     0.0    0.00    0.00     100         std::_Vector_base<double, std::allocator<double> >::~_Vector_base() [62]
+                0.00    0.00     100/100         std::_Vector_base<double, std::allocator<double> >::_M_deallocate(double*, unsigned long) [58]
+                0.00    0.00     100/100         std::_Vector_base<double, std::allocator<double> >::_Vector_impl::~_Vector_impl() [57]
+-----------------------------------------------
+                0.00    0.00     100/100         std::_Vector_base<double, std::allocator<double> >::_M_deallocate(double*, unsigned long) [58]
+[63]     0.0    0.00    0.00     100         std::allocator_traits<std::allocator<double> >::deallocate(std::allocator<double>&, double*, unsigned long) [63]
+                0.00    0.00     100/100         __gnu_cxx::new_allocator<double>::deallocate(double*, unsigned long) [49]
+-----------------------------------------------
+                0.00    0.00     100/100         std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) [55]
+[64]     0.0    0.00    0.00     100         std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) [64]
+                0.00    0.00     100/100         __gnu_cxx::new_allocator<double>::allocate(unsigned long, void const*) [50]
+-----------------------------------------------
+                0.00    0.00     100/100         std::vector<double, std::allocator<double> >::_S_max_size(std::allocator<double> const&) [67]
+[65]     0.0    0.00    0.00     100         std::allocator_traits<std::allocator<double> >::max_size(std::allocator<double> const&) [65]
+                0.00    0.00     100/100         __gnu_cxx::new_allocator<double>::max_size() const [52]
+-----------------------------------------------
+                0.00    0.00     100/100         double* std::uninitialized_fill_n<double*, unsigned long, double>(double*, unsigned long, double const&) [75]
+[66]     0.0    0.00    0.00     100         double* std::__uninitialized_fill_n<true>::__uninit_fill_n<double*, unsigned long, double>(double*, unsigned long, double const&) [66]
+                0.00    0.00     100/100         double* std::fill_n<double*, unsigned long, double>(double*, unsigned long, double const&) [77]
+-----------------------------------------------
+                0.00    0.00     100/100         std::vector<double, std::allocator<double> >::_S_check_init_len(unsigned long, std::allocator<double> const&) [68]
+[67]     0.0    0.00    0.00     100         std::vector<double, std::allocator<double> >::_S_max_size(std::allocator<double> const&) [67]
+                0.00    0.00     100/100         std::allocator_traits<std::allocator<double> >::max_size(std::allocator<double> const&) [65]
+                0.00    0.00     100/107         unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&) [48]
+-----------------------------------------------
+                0.00    0.00     100/100         std::vector<double, std::allocator<double> >::vector(unsigned long, double const&, std::allocator<double> const&) [70]
+[68]     0.0    0.00    0.00     100         std::vector<double, std::allocator<double> >::_S_check_init_len(unsigned long, std::allocator<double> const&) [68]
+                0.00    0.00     100/100         std::vector<double, std::allocator<double> >::_S_max_size(std::allocator<double> const&) [67]
+                0.00    0.00     100/200         std::allocator<double>::allocator(std::allocator<double> const&) [46]
+                0.00    0.00     100/300         std::allocator<double>::~allocator() [43]
+-----------------------------------------------
+                0.00    0.00     100/100         std::vector<double, std::allocator<double> >::vector(unsigned long, double const&, std::allocator<double> const&) [70]
+[69]     0.0    0.00    0.00     100         std::vector<double, std::allocator<double> >::_M_fill_initialize(unsigned long, double const&) [69]
+                0.00    0.00     100/200         std::_Vector_base<double, std::allocator<double> >::_M_get_Tp_allocator() [47]
+                0.00    0.00     100/100         double* std::__uninitialized_fill_n_a<double*, unsigned long, double, double>(double*, unsigned long, double const&, std::allocator<double>&) [76]
+-----------------------------------------------
+                0.00    0.00     100/100         calculos(std::vector<Coffee, std::allocator<Coffee> >&, int, int, int) [22]
+[70]     0.0    0.00    0.00     100         std::vector<double, std::allocator<double> >::vector(unsigned long, double const&, std::allocator<double> const&) [70]
+                0.00    0.00     100/100         std::vector<double, std::allocator<double> >::_S_check_init_len(unsigned long, std::allocator<double> const&) [68]
+                0.00    0.00     100/100         std::_Vector_base<double, std::allocator<double> >::_Vector_base(unsigned long, std::allocator<double> const&) [61]
+                0.00    0.00     100/100         std::vector<double, std::allocator<double> >::_M_fill_initialize(unsigned long, double const&) [69]
+-----------------------------------------------
+                0.00    0.00      50/100         main [1]
+                0.00    0.00      50/100         calculos(std::vector<Coffee, std::allocator<Coffee> >&, int, int, int) [22]
+[71]     0.0    0.00    0.00     100         std::vector<double, std::allocator<double> >::~vector() [71]
+                0.00    0.00     100/200         std::_Vector_base<double, std::allocator<double> >::_M_get_Tp_allocator() [47]
+                0.00    0.00     100/100         void std::_Destroy<double*, double>(double*, double*, std::allocator<double>&) [79]
+                0.00    0.00     100/100         std::_Vector_base<double, std::allocator<double> >::~_Vector_base() [62]
+-----------------------------------------------
+                0.00    0.00     100/100         double* std::fill_n<double*, unsigned long, double>(double*, unsigned long, double const&) [77]
+[72]     0.0    0.00    0.00     100         double* std::__fill_n_a<double*, unsigned long, double>(double*, unsigned long, double const&, std::random_access_iterator_tag) [72]
+                0.00    0.00     100/100         void std::__fill_a<double*, double>(double*, double*, double const&) [80]
+-----------------------------------------------
+                0.00    0.00     100/100         double* std::fill_n<double*, unsigned long, double>(double*, unsigned long, double const&) [77]
+[73]     0.0    0.00    0.00     100         std::__size_to_integer(unsigned long) [73]
+-----------------------------------------------
+                0.00    0.00     100/100         double* std::fill_n<double*, unsigned long, double>(double*, unsigned long, double const&) [77]
+[74]     0.0    0.00    0.00     100         std::iterator_traits<double*>::iterator_category std::__iterator_category<double*>(double* const&) [74]
+-----------------------------------------------
+                0.00    0.00     100/100         double* std::__uninitialized_fill_n_a<double*, unsigned long, double, double>(double*, unsigned long, double const&, std::allocator<double>&) [76]
+[75]     0.0    0.00    0.00     100         double* std::uninitialized_fill_n<double*, unsigned long, double>(double*, unsigned long, double const&) [75]
+                0.00    0.00     100/100         double* std::__uninitialized_fill_n<true>::__uninit_fill_n<double*, unsigned long, double>(double*, unsigned long, double const&) [66]
+-----------------------------------------------
+                0.00    0.00     100/100         std::vector<double, std::allocator<double> >::_M_fill_initialize(unsigned long, double const&) [69]
+[76]     0.0    0.00    0.00     100         double* std::__uninitialized_fill_n_a<double*, unsigned long, double, double>(double*, unsigned long, double const&, std::allocator<double>&) [76]
+                0.00    0.00     100/100         double* std::uninitialized_fill_n<double*, unsigned long, double>(double*, unsigned long, double const&) [75]
+-----------------------------------------------
+                0.00    0.00     100/100         double* std::__uninitialized_fill_n<true>::__uninit_fill_n<double*, unsigned long, double>(double*, unsigned long, double const&) [66]
+[77]     0.0    0.00    0.00     100         double* std::fill_n<double*, unsigned long, double>(double*, unsigned long, double const&) [77]
+                0.00    0.00     100/100         std::iterator_traits<double*>::iterator_category std::__iterator_category<double*>(double* const&) [74]
+                0.00    0.00     100/100         std::__size_to_integer(unsigned long) [73]
+                0.00    0.00     100/100         double* std::__fill_n_a<double*, unsigned long, double>(double*, unsigned long, double const&, std::random_access_iterator_tag) [72]
+-----------------------------------------------
+                0.00    0.00     100/100         void std::_Destroy<double*, double>(double*, double*, std::allocator<double>&) [79]
+[78]     0.0    0.00    0.00     100         void std::_Destroy<double*>(double*, double*) [78]
+                0.00    0.00     100/100         void std::_Destroy_aux<true>::__destroy<double*>(double*, double*) [54]
+-----------------------------------------------
+                0.00    0.00     100/100         std::vector<double, std::allocator<double> >::~vector() [71]
+[79]     0.0    0.00    0.00     100         void std::_Destroy<double*, double>(double*, double*, std::allocator<double>&) [79]
+                0.00    0.00     100/100         void std::_Destroy<double*>(double*, double*) [78]
+-----------------------------------------------
+                0.00    0.00     100/100         double* std::__fill_n_a<double*, unsigned long, double>(double*, unsigned long, double const&, std::random_access_iterator_tag) [72]
+[80]     0.0    0.00    0.00     100         void std::__fill_a<double*, double>(double*, double*, double const&) [80]
+                0.00    0.00     100/100         __gnu_cxx::__enable_if<std::__is_scalar<double>::__value, void>::__type std::__fill_a1<double*, double>(double*, double*, double const&) [81]
+-----------------------------------------------
+                0.00    0.00     100/100         void std::__fill_a<double*, double>(double*, double*, double const&) [80]
+[81]     0.0    0.00    0.00     100         __gnu_cxx::__enable_if<std::__is_scalar<double>::__value, void>::__type std::__fill_a1<double*, double>(double*, double*, double const&) [81]
+-----------------------------------------------
+                0.00    0.00      18/18          int* std::__relocate_a<int*, int*, std::allocator<int> >(int*, int*, int*, std::allocator<int>&) [96]
+[82]     0.0    0.00    0.00      18         int* std::__niter_base<int*>(int*) [82]
+-----------------------------------------------
+                0.00    0.00       6/12          void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) [112]
+                0.00    0.00       6/12          __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >::difference_type __gnu_cxx::operator-<int*, std::vector<int, std::allocator<int> > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > > const&, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > > const&) [106]
+[83]     0.0    0.00    0.00      12         __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >::base() const [83]
+-----------------------------------------------
+                0.00    0.00      12/12          std::vector<int, std::allocator<int> >::_M_check_len(unsigned long, char const*) const [107]
+[84]     0.0    0.00    0.00      12         std::vector<int, std::allocator<int> >::size() const [84]
+-----------------------------------------------
+                0.00    0.00       3/11          void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) [112]
+                0.00    0.00       4/11          void std::allocator_traits<std::allocator<int> >::construct<int, int const&>(std::allocator<int>&, int*, int const&) [100]
+                0.00    0.00       4/11          void __gnu_cxx::new_allocator<int>::construct<int, int const&>(int*, int const&) [98]
+[85]     0.0    0.00    0.00      11         int const& std::forward<int const&>(std::remove_reference<int const&>::type&) [85]
+-----------------------------------------------
+                0.00    0.00       3/9           __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) [105]
+                0.00    0.00       6/9           __gnu_cxx::new_allocator<int>::max_size() const [89]
+[86]     0.0    0.00    0.00       9         __gnu_cxx::new_allocator<int>::_M_max_size() const [86]
+-----------------------------------------------
+                0.00    0.00       1/7           std::vector<int, std::allocator<int> >::~vector() [155]
+                0.00    0.00       6/7           void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) [112]
+[87]     0.0    0.00    0.00       7         std::_Vector_base<int, std::allocator<int> >::_M_get_Tp_allocator() [87]
+-----------------------------------------------
+                0.00    0.00       3/6           std::vector<int, std::allocator<int> >::end() [113]
+                0.00    0.00       3/6           std::vector<int, std::allocator<int> >::begin() [114]
+[88]     0.0    0.00    0.00       6         __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >::__normal_iterator(int* const&) [88]
+-----------------------------------------------
+                0.00    0.00       6/6           std::allocator_traits<std::allocator<int> >::max_size(std::allocator<int> const&) [92]
+[89]     0.0    0.00    0.00       6         __gnu_cxx::new_allocator<int>::max_size() const [89]
+                0.00    0.00       6/9           __gnu_cxx::new_allocator<int>::_M_max_size() const [86]
+-----------------------------------------------
+                0.00    0.00       6/6           std::vector<int, std::allocator<int> >::max_size() const [91]
+[90]     0.0    0.00    0.00       6         std::_Vector_base<int, std::allocator<int> >::_M_get_Tp_allocator() const [90]
+-----------------------------------------------
+                0.00    0.00       6/6           std::vector<int, std::allocator<int> >::_M_check_len(unsigned long, char const*) const [107]
+[91]     0.0    0.00    0.00       6         std::vector<int, std::allocator<int> >::max_size() const [91]
+                0.00    0.00       6/6           std::vector<int, std::allocator<int> >::_S_max_size(std::allocator<int> const&) [93]
+                0.00    0.00       6/6           std::_Vector_base<int, std::allocator<int> >::_M_get_Tp_allocator() const [90]
+-----------------------------------------------
+                0.00    0.00       6/6           std::vector<int, std::allocator<int> >::_S_max_size(std::allocator<int> const&) [93]
+[92]     0.0    0.00    0.00       6         std::allocator_traits<std::allocator<int> >::max_size(std::allocator<int> const&) [92]
+                0.00    0.00       6/6           __gnu_cxx::new_allocator<int>::max_size() const [89]
+-----------------------------------------------
+                0.00    0.00       6/6           std::vector<int, std::allocator<int> >::max_size() const [91]
+[93]     0.0    0.00    0.00       6         std::vector<int, std::allocator<int> >::_S_max_size(std::allocator<int> const&) [93]
+                0.00    0.00       6/6           std::allocator_traits<std::allocator<int> >::max_size(std::allocator<int> const&) [92]
+                0.00    0.00       6/107         unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&) [48]
+-----------------------------------------------
+                0.00    0.00       6/6           void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) [112]
+[94]     0.0    0.00    0.00       6         std::vector<int, std::allocator<int> >::_S_relocate(int*, int*, int*, std::allocator<int>&) [94]
+                0.00    0.00       6/6           std::vector<int, std::allocator<int> >::_S_do_relocate(int*, int*, int*, std::allocator<int>&, std::integral_constant<bool, true>) [95]
+-----------------------------------------------
+                0.00    0.00       6/6           std::vector<int, std::allocator<int> >::_S_relocate(int*, int*, int*, std::allocator<int>&) [94]
+[95]     0.0    0.00    0.00       6         std::vector<int, std::allocator<int> >::_S_do_relocate(int*, int*, int*, std::allocator<int>&, std::integral_constant<bool, true>) [95]
+                0.00    0.00       6/6           int* std::__relocate_a<int*, int*, std::allocator<int> >(int*, int*, int*, std::allocator<int>&) [96]
+-----------------------------------------------
+                0.00    0.00       6/6           std::vector<int, std::allocator<int> >::_S_do_relocate(int*, int*, int*, std::allocator<int>&, std::integral_constant<bool, true>) [95]
+[96]     0.0    0.00    0.00       6         int* std::__relocate_a<int*, int*, std::allocator<int> >(int*, int*, int*, std::allocator<int>&) [96]
+                0.00    0.00      18/18          int* std::__niter_base<int*>(int*) [82]
+                0.00    0.00       6/6           std::enable_if<std::__is_bitwise_relocatable<int, void>::value, int*>::type std::__relocate_a_1<int, int>(int*, int*, int*, std::allocator<int>&) [97]
+-----------------------------------------------
+                0.00    0.00       6/6           int* std::__relocate_a<int*, int*, std::allocator<int> >(int*, int*, int*, std::allocator<int>&) [96]
+[97]     0.0    0.00    0.00       6         std::enable_if<std::__is_bitwise_relocatable<int, void>::value, int*>::type std::__relocate_a_1<int, int>(int*, int*, int*, std::allocator<int>&) [97]
+-----------------------------------------------
+                0.00    0.00       4/4           void std::allocator_traits<std::allocator<int> >::construct<int, int const&>(std::allocator<int>&, int*, int const&) [100]
+[98]     0.0    0.00    0.00       4         void __gnu_cxx::new_allocator<int>::construct<int, int const&>(int*, int const&) [98]
+                0.00    0.00       4/11          int const& std::forward<int const&>(std::remove_reference<int const&>::type&) [85]
+                0.00    0.00       4/404         operator new(unsigned long, void*) [37]
+-----------------------------------------------
+                0.00    0.00       1/4           std::_Vector_base<int, std::allocator<int> >::~_Vector_base() [145]
+                0.00    0.00       3/4           void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) [112]
+[99]     0.0    0.00    0.00       4         std::_Vector_base<int, std::allocator<int> >::_M_deallocate(int*, unsigned long) [99]
+                0.00    0.00       3/3           std::allocator_traits<std::allocator<int> >::deallocate(std::allocator<int>&, int*, unsigned long) [110]
+-----------------------------------------------
+                0.00    0.00       1/4           std::vector<int, std::allocator<int> >::push_back(int const&) [101]
+                0.00    0.00       3/4           void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) [112]
+[100]    0.0    0.00    0.00       4         void std::allocator_traits<std::allocator<int> >::construct<int, int const&>(std::allocator<int>&, int*, int const&) [100]
+                0.00    0.00       4/11          int const& std::forward<int const&>(std::remove_reference<int const&>::type&) [85]
+                0.00    0.00       4/4           void __gnu_cxx::new_allocator<int>::construct<int, int const&>(int*, int const&) [98]
+-----------------------------------------------
+                0.00    0.00       4/4           main [1]
+[101]    0.0    0.00    0.00       4         std::vector<int, std::allocator<int> >::push_back(int const&) [101]
+                0.00    0.00       3/3           std::vector<int, std::allocator<int> >::end() [113]
+                0.00    0.00       3/3           void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) [112]
+                0.00    0.00       1/4           void std::allocator_traits<std::allocator<int> >::construct<int, int const&>(std::allocator<int>&, int*, int const&) [100]
+-----------------------------------------------
+                0.00    0.00       4/4           main [1]
+[102]    0.0    0.00    0.00       4         std::vector<int, std::allocator<int> >::operator[](unsigned long) [102]
+-----------------------------------------------
+                0.00    0.00       3/3           std::allocator<Coffee>::~allocator() [108]
+[103]    0.0    0.00    0.00       3         __gnu_cxx::new_allocator<Coffee>::~new_allocator() [103]
+-----------------------------------------------
+                0.00    0.00       3/3           std::allocator_traits<std::allocator<int> >::deallocate(std::allocator<int>&, int*, unsigned long) [110]
+[104]    0.0    0.00    0.00       3         __gnu_cxx::new_allocator<int>::deallocate(int*, unsigned long) [104]
+-----------------------------------------------
+                0.00    0.00       3/3           std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) [111]
+[105]    0.0    0.00    0.00       3         __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) [105]
+                0.00    0.00       3/9           __gnu_cxx::new_allocator<int>::_M_max_size() const [86]
+-----------------------------------------------
+                0.00    0.00       3/3           void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) [112]
+[106]    0.0    0.00    0.00       3         __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >::difference_type __gnu_cxx::operator-<int*, std::vector<int, std::allocator<int> > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > > const&, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > > const&) [106]
+                0.00    0.00       6/12          __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >::base() const [83]
+-----------------------------------------------
+                0.00    0.00       3/3           void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) [112]
+[107]    0.0    0.00    0.00       3         std::vector<int, std::allocator<int> >::_M_check_len(unsigned long, char const*) const [107]
+                0.00    0.00      12/12          std::vector<int, std::allocator<int> >::size() const [84]
+                0.00    0.00       6/6           std::vector<int, std::allocator<int> >::max_size() const [91]
+                0.00    0.00       3/3           unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&) [115]
+-----------------------------------------------
+                0.00    0.00       1/3           main [1]
+                0.00    0.00       1/3           std::vector<Coffee, std::allocator<Coffee> >::_S_check_init_len(unsigned long, std::allocator<Coffee> const&) [151]
+                0.00    0.00       1/3           std::_Vector_base<Coffee, std::allocator<Coffee> >::_Vector_impl::~_Vector_impl() [135]
+[108]    0.0    0.00    0.00       3         std::allocator<Coffee>::~allocator() [108]
+                0.00    0.00       3/3           __gnu_cxx::new_allocator<Coffee>::~new_allocator() [103]
+-----------------------------------------------
+                0.00    0.00       3/3           void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) [112]
+[109]    0.0    0.00    0.00       3         std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) [109]
+                0.00    0.00       3/3           std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) [111]
+-----------------------------------------------
+                0.00    0.00       3/3           std::_Vector_base<int, std::allocator<int> >::_M_deallocate(int*, unsigned long) [99]
+[110]    0.0    0.00    0.00       3         std::allocator_traits<std::allocator<int> >::deallocate(std::allocator<int>&, int*, unsigned long) [110]
+                0.00    0.00       3/3           __gnu_cxx::new_allocator<int>::deallocate(int*, unsigned long) [104]
+-----------------------------------------------
+                0.00    0.00       3/3           std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) [109]
+[111]    0.0    0.00    0.00       3         std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) [111]
+                0.00    0.00       3/3           __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) [105]
+-----------------------------------------------
+                0.00    0.00       3/3           std::vector<int, std::allocator<int> >::push_back(int const&) [101]
+[112]    0.0    0.00    0.00       3         void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) [112]
+                0.00    0.00       6/7           std::_Vector_base<int, std::allocator<int> >::_M_get_Tp_allocator() [87]
+                0.00    0.00       6/12          __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >::base() const [83]
+                0.00    0.00       6/6           std::vector<int, std::allocator<int> >::_S_relocate(int*, int*, int*, std::allocator<int>&) [94]
+                0.00    0.00       3/3           std::vector<int, std::allocator<int> >::_M_check_len(unsigned long, char const*) const [107]
+                0.00    0.00       3/3           std::vector<int, std::allocator<int> >::begin() [114]
+                0.00    0.00       3/3           __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >::difference_type __gnu_cxx::operator-<int*, std::vector<int, std::allocator<int> > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > > const&, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > > const&) [106]
+                0.00    0.00       3/3           std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) [109]
+                0.00    0.00       3/11          int const& std::forward<int const&>(std::remove_reference<int const&>::type&) [85]
+                0.00    0.00       3/4           void std::allocator_traits<std::allocator<int> >::construct<int, int const&>(std::allocator<int>&, int*, int const&) [100]
+                0.00    0.00       3/4           std::_Vector_base<int, std::allocator<int> >::_M_deallocate(int*, unsigned long) [99]
+-----------------------------------------------
+                0.00    0.00       3/3           std::vector<int, std::allocator<int> >::push_back(int const&) [101]
+[113]    0.0    0.00    0.00       3         std::vector<int, std::allocator<int> >::end() [113]
+                0.00    0.00       3/6           __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >::__normal_iterator(int* const&) [88]
+-----------------------------------------------
+                0.00    0.00       3/3           void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) [112]
+[114]    0.0    0.00    0.00       3         std::vector<int, std::allocator<int> >::begin() [114]
+                0.00    0.00       3/6           __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >::__normal_iterator(int* const&) [88]
+-----------------------------------------------
+                0.00    0.00       3/3           std::vector<int, std::allocator<int> >::_M_check_len(unsigned long, char const*) const [107]
+[115]    0.0    0.00    0.00       3         unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&) [115]
+-----------------------------------------------
+                0.00    0.00       2/2           std::allocator<Coffee>::allocator(std::allocator<Coffee> const&) [118]
+[116]    0.0    0.00    0.00       2         __gnu_cxx::new_allocator<Coffee>::new_allocator(__gnu_cxx::new_allocator<Coffee> const&) [116]
+-----------------------------------------------
+                0.00    0.00       1/2           __gnu_cxx::new_allocator<Coffee>::max_size() const [127]
+                0.00    0.00       1/2           __gnu_cxx::new_allocator<Coffee>::allocate(unsigned long, void const*) [123]
+[117]    0.0    0.00    0.00       2         __gnu_cxx::new_allocator<Coffee>::_M_max_size() const [117]
+-----------------------------------------------
+                0.00    0.00       1/2           std::vector<Coffee, std::allocator<Coffee> >::_S_check_init_len(unsigned long, std::allocator<Coffee> const&) [151]
+                0.00    0.00       1/2           std::_Vector_base<Coffee, std::allocator<Coffee> >::_Vector_impl::_Vector_impl(std::allocator<Coffee> const&) [134]
+[118]    0.0    0.00    0.00       2         std::allocator<Coffee>::allocator(std::allocator<Coffee> const&) [118]
+                0.00    0.00       2/2           __gnu_cxx::new_allocator<Coffee>::new_allocator(__gnu_cxx::new_allocator<Coffee> const&) [116]
+-----------------------------------------------
+                0.00    0.00       1/2           std::vector<Coffee, std::allocator<Coffee> >::~vector() [15]
+                0.00    0.00       1/2           std::vector<Coffee, std::allocator<Coffee> >::_M_default_initialize(unsigned long) [152]
+[119]    0.0    0.00    0.00       2         std::_Vector_base<Coffee, std::allocator<Coffee> >::_M_get_Tp_allocator() [119]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I_main [161]
+[120]    0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [120]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I__Z8calculosRSt6vectorI6CoffeeSaIS0_EEiii [160]
+[121]    0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [121]
+-----------------------------------------------
+                0.00    0.00       1/1           std::allocator_traits<std::allocator<Coffee> >::deallocate(std::allocator<Coffee>&, Coffee*, unsigned long) [146]
+[122]    0.0    0.00    0.00       1         __gnu_cxx::new_allocator<Coffee>::deallocate(Coffee*, unsigned long) [122]
+-----------------------------------------------
+                0.00    0.00       1/1           std::allocator_traits<std::allocator<Coffee> >::allocate(std::allocator<Coffee>&, unsigned long) [147]
+[123]    0.0    0.00    0.00       1         __gnu_cxx::new_allocator<Coffee>::allocate(unsigned long, void const*) [123]
+                0.00    0.00       1/2           __gnu_cxx::new_allocator<Coffee>::_M_max_size() const [117]
+-----------------------------------------------
+                0.00    0.00       1/1           std::allocator<Coffee>::allocator() [128]
+[124]    0.0    0.00    0.00       1         __gnu_cxx::new_allocator<Coffee>::new_allocator() [124]
+-----------------------------------------------
+                0.00    0.00       1/1           std::allocator<int>::allocator() [129]
+[125]    0.0    0.00    0.00       1         __gnu_cxx::new_allocator<int>::new_allocator() [125]
+-----------------------------------------------
+                0.00    0.00       1/1           std::allocator<int>::~allocator() [130]
+[126]    0.0    0.00    0.00       1         __gnu_cxx::new_allocator<int>::~new_allocator() [126]
+-----------------------------------------------
+                0.00    0.00       1/1           std::allocator_traits<std::allocator<Coffee> >::max_size(std::allocator<Coffee> const&) [148]
+[127]    0.0    0.00    0.00       1         __gnu_cxx::new_allocator<Coffee>::max_size() const [127]
+                0.00    0.00       1/2           __gnu_cxx::new_allocator<Coffee>::_M_max_size() const [117]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[128]    0.0    0.00    0.00       1         std::allocator<Coffee>::allocator() [128]
+                0.00    0.00       1/1           __gnu_cxx::new_allocator<Coffee>::new_allocator() [124]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<int, std::allocator<int> >::_Vector_impl::_Vector_impl() [141]
+[129]    0.0    0.00    0.00       1         std::allocator<int>::allocator() [129]
+                0.00    0.00       1/1           __gnu_cxx::new_allocator<int>::new_allocator() [125]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<int, std::allocator<int> >::_Vector_impl::~_Vector_impl() [142]
+[130]    0.0    0.00    0.00       1         std::allocator<int>::~allocator() [130]
+                0.00    0.00       1/1           __gnu_cxx::new_allocator<int>::~new_allocator() [126]
+-----------------------------------------------
+                0.00    0.00       1/1           void std::_Destroy<Coffee*>(Coffee*, Coffee*) [16]
+[131]    0.0    0.00    0.00       1         void std::_Destroy_aux<true>::__destroy<Coffee*>(Coffee*, Coffee*) [131]
+-----------------------------------------------
+                0.00    0.00       1/1           void std::_Destroy<int*>(int*, int*) [158]
+[132]    0.0    0.00    0.00       1         void std::_Destroy_aux<true>::__destroy<int*>(int*, int*) [132]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<Coffee, std::allocator<Coffee> >::_M_create_storage(unsigned long) [137]
+[133]    0.0    0.00    0.00       1         std::_Vector_base<Coffee, std::allocator<Coffee> >::_M_allocate(unsigned long) [133]
+                0.00    0.00       1/1           std::allocator_traits<std::allocator<Coffee> >::allocate(std::allocator<Coffee>&, unsigned long) [147]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<Coffee, std::allocator<Coffee> >::_Vector_base(unsigned long, std::allocator<Coffee> const&) [139]
+[134]    0.0    0.00    0.00       1         std::_Vector_base<Coffee, std::allocator<Coffee> >::_Vector_impl::_Vector_impl(std::allocator<Coffee> const&) [134]
+                0.00    0.00       1/2           std::allocator<Coffee>::allocator(std::allocator<Coffee> const&) [118]
+                0.00    0.00       1/1           std::_Vector_base<Coffee, std::allocator<Coffee> >::_Vector_impl_data::_Vector_impl_data() [138]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<Coffee, std::allocator<Coffee> >::~_Vector_base() [140]
+[135]    0.0    0.00    0.00       1         std::_Vector_base<Coffee, std::allocator<Coffee> >::_Vector_impl::~_Vector_impl() [135]
+                0.00    0.00       1/3           std::allocator<Coffee>::~allocator() [108]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<Coffee, std::allocator<Coffee> >::~_Vector_base() [140]
+[136]    0.0    0.00    0.00       1         std::_Vector_base<Coffee, std::allocator<Coffee> >::_M_deallocate(Coffee*, unsigned long) [136]
+                0.00    0.00       1/1           std::allocator_traits<std::allocator<Coffee> >::deallocate(std::allocator<Coffee>&, Coffee*, unsigned long) [146]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<Coffee, std::allocator<Coffee> >::_Vector_base(unsigned long, std::allocator<Coffee> const&) [139]
+[137]    0.0    0.00    0.00       1         std::_Vector_base<Coffee, std::allocator<Coffee> >::_M_create_storage(unsigned long) [137]
+                0.00    0.00       1/1           std::_Vector_base<Coffee, std::allocator<Coffee> >::_M_allocate(unsigned long) [133]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<Coffee, std::allocator<Coffee> >::_Vector_impl::_Vector_impl(std::allocator<Coffee> const&) [134]
+[138]    0.0    0.00    0.00       1         std::_Vector_base<Coffee, std::allocator<Coffee> >::_Vector_impl_data::_Vector_impl_data() [138]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<Coffee, std::allocator<Coffee> >::vector(unsigned long, std::allocator<Coffee> const&) [153]
+[139]    0.0    0.00    0.00       1         std::_Vector_base<Coffee, std::allocator<Coffee> >::_Vector_base(unsigned long, std::allocator<Coffee> const&) [139]
+                0.00    0.00       1/1           std::_Vector_base<Coffee, std::allocator<Coffee> >::_Vector_impl::_Vector_impl(std::allocator<Coffee> const&) [134]
+                0.00    0.00       1/1           std::_Vector_base<Coffee, std::allocator<Coffee> >::_M_create_storage(unsigned long) [137]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<Coffee, std::allocator<Coffee> >::~vector() [15]
+[140]    0.0    0.00    0.00       1         std::_Vector_base<Coffee, std::allocator<Coffee> >::~_Vector_base() [140]
+                0.00    0.00       1/1           std::_Vector_base<Coffee, std::allocator<Coffee> >::_M_deallocate(Coffee*, unsigned long) [136]
+                0.00    0.00       1/1           std::_Vector_base<Coffee, std::allocator<Coffee> >::_Vector_impl::~_Vector_impl() [135]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<int, std::allocator<int> >::_Vector_base() [144]
+[141]    0.0    0.00    0.00       1         std::_Vector_base<int, std::allocator<int> >::_Vector_impl::_Vector_impl() [141]
+                0.00    0.00       1/1           std::_Vector_base<int, std::allocator<int> >::_Vector_impl_data::_Vector_impl_data() [143]
+                0.00    0.00       1/1           std::allocator<int>::allocator() [129]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<int, std::allocator<int> >::~_Vector_base() [145]
+[142]    0.0    0.00    0.00       1         std::_Vector_base<int, std::allocator<int> >::_Vector_impl::~_Vector_impl() [142]
+                0.00    0.00       1/1           std::allocator<int>::~allocator() [130]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<int, std::allocator<int> >::_Vector_impl::_Vector_impl() [141]
+[143]    0.0    0.00    0.00       1         std::_Vector_base<int, std::allocator<int> >::_Vector_impl_data::_Vector_impl_data() [143]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<int, std::allocator<int> >::vector() [154]
+[144]    0.0    0.00    0.00       1         std::_Vector_base<int, std::allocator<int> >::_Vector_base() [144]
+                0.00    0.00       1/1           std::_Vector_base<int, std::allocator<int> >::_Vector_impl::_Vector_impl() [141]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<int, std::allocator<int> >::~vector() [155]
+[145]    0.0    0.00    0.00       1         std::_Vector_base<int, std::allocator<int> >::~_Vector_base() [145]
+                0.00    0.00       1/4           std::_Vector_base<int, std::allocator<int> >::_M_deallocate(int*, unsigned long) [99]
+                0.00    0.00       1/1           std::_Vector_base<int, std::allocator<int> >::_Vector_impl::~_Vector_impl() [142]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<Coffee, std::allocator<Coffee> >::_M_deallocate(Coffee*, unsigned long) [136]
+[146]    0.0    0.00    0.00       1         std::allocator_traits<std::allocator<Coffee> >::deallocate(std::allocator<Coffee>&, Coffee*, unsigned long) [146]
+                0.00    0.00       1/1           __gnu_cxx::new_allocator<Coffee>::deallocate(Coffee*, unsigned long) [122]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Vector_base<Coffee, std::allocator<Coffee> >::_M_allocate(unsigned long) [133]
+[147]    0.0    0.00    0.00       1         std::allocator_traits<std::allocator<Coffee> >::allocate(std::allocator<Coffee>&, unsigned long) [147]
+                0.00    0.00       1/1           __gnu_cxx::new_allocator<Coffee>::allocate(unsigned long, void const*) [123]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<Coffee, std::allocator<Coffee> >::_S_max_size(std::allocator<Coffee> const&) [150]
+[148]    0.0    0.00    0.00       1         std::allocator_traits<std::allocator<Coffee> >::max_size(std::allocator<Coffee> const&) [148]
+                0.00    0.00       1/1           __gnu_cxx::new_allocator<Coffee>::max_size() const [127]
+-----------------------------------------------
+                0.00    0.00       1/1           Coffee* std::__uninitialized_default_n<Coffee*, unsigned long>(Coffee*, unsigned long) [156]
+[149]    0.0    0.00    0.00       1         Coffee* std::__uninitialized_default_n_1<false>::__uninit_default_n<Coffee*, unsigned long>(Coffee*, unsigned long) [149]
+                0.00    0.00     400/400         void std::_Construct<Coffee>(Coffee*) [39]
+                0.00    0.00     400/400         Coffee* std::__addressof<Coffee>(Coffee&) [40]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<Coffee, std::allocator<Coffee> >::_S_check_init_len(unsigned long, std::allocator<Coffee> const&) [151]
+[150]    0.0    0.00    0.00       1         std::vector<Coffee, std::allocator<Coffee> >::_S_max_size(std::allocator<Coffee> const&) [150]
+                0.00    0.00       1/1           std::allocator_traits<std::allocator<Coffee> >::max_size(std::allocator<Coffee> const&) [148]
+                0.00    0.00       1/107         unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&) [48]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<Coffee, std::allocator<Coffee> >::vector(unsigned long, std::allocator<Coffee> const&) [153]
+[151]    0.0    0.00    0.00       1         std::vector<Coffee, std::allocator<Coffee> >::_S_check_init_len(unsigned long, std::allocator<Coffee> const&) [151]
+                0.00    0.00       1/1           std::vector<Coffee, std::allocator<Coffee> >::_S_max_size(std::allocator<Coffee> const&) [150]
+                0.00    0.00       1/2           std::allocator<Coffee>::allocator(std::allocator<Coffee> const&) [118]
+                0.00    0.00       1/3           std::allocator<Coffee>::~allocator() [108]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<Coffee, std::allocator<Coffee> >::vector(unsigned long, std::allocator<Coffee> const&) [153]
+[152]    0.0    0.00    0.00       1         std::vector<Coffee, std::allocator<Coffee> >::_M_default_initialize(unsigned long) [152]
+                0.00    0.00       1/2           std::_Vector_base<Coffee, std::allocator<Coffee> >::_M_get_Tp_allocator() [119]
+                0.00    0.00       1/1           Coffee* std::__uninitialized_default_n_a<Coffee*, unsigned long, Coffee>(Coffee*, unsigned long, std::allocator<Coffee>&) [157]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[153]    0.0    0.00    0.00       1         std::vector<Coffee, std::allocator<Coffee> >::vector(unsigned long, std::allocator<Coffee> const&) [153]
+                0.00    0.00       1/1           std::vector<Coffee, std::allocator<Coffee> >::_S_check_init_len(unsigned long, std::allocator<Coffee> const&) [151]
+                0.00    0.00       1/1           std::_Vector_base<Coffee, std::allocator<Coffee> >::_Vector_base(unsigned long, std::allocator<Coffee> const&) [139]
+                0.00    0.00       1/1           std::vector<Coffee, std::allocator<Coffee> >::_M_default_initialize(unsigned long) [152]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[154]    0.0    0.00    0.00       1         std::vector<int, std::allocator<int> >::vector() [154]
+                0.00    0.00       1/1           std::_Vector_base<int, std::allocator<int> >::_Vector_base() [144]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[155]    0.0    0.00    0.00       1         std::vector<int, std::allocator<int> >::~vector() [155]
+                0.00    0.00       1/7           std::_Vector_base<int, std::allocator<int> >::_M_get_Tp_allocator() [87]
+                0.00    0.00       1/1           void std::_Destroy<int*, int>(int*, int*, std::allocator<int>&) [159]
+                0.00    0.00       1/1           std::_Vector_base<int, std::allocator<int> >::~_Vector_base() [145]
+-----------------------------------------------
+                0.00    0.00       1/1           Coffee* std::__uninitialized_default_n_a<Coffee*, unsigned long, Coffee>(Coffee*, unsigned long, std::allocator<Coffee>&) [157]
+[156]    0.0    0.00    0.00       1         Coffee* std::__uninitialized_default_n<Coffee*, unsigned long>(Coffee*, unsigned long) [156]
+                0.00    0.00       1/1           Coffee* std::__uninitialized_default_n_1<false>::__uninit_default_n<Coffee*, unsigned long>(Coffee*, unsigned long) [149]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<Coffee, std::allocator<Coffee> >::_M_default_initialize(unsigned long) [152]
+[157]    0.0    0.00    0.00       1         Coffee* std::__uninitialized_default_n_a<Coffee*, unsigned long, Coffee>(Coffee*, unsigned long, std::allocator<Coffee>&) [157]
+                0.00    0.00       1/1           Coffee* std::__uninitialized_default_n<Coffee*, unsigned long>(Coffee*, unsigned long) [156]
+-----------------------------------------------
+                0.00    0.00       1/1           void std::_Destroy<int*, int>(int*, int*, std::allocator<int>&) [159]
+[158]    0.0    0.00    0.00       1         void std::_Destroy<int*>(int*, int*) [158]
+                0.00    0.00       1/1           void std::_Destroy_aux<true>::__destroy<int*>(int*, int*) [132]
+-----------------------------------------------
+                0.00    0.00       1/1           std::vector<int, std::allocator<int> >::~vector() [155]
+[159]    0.0    0.00    0.00       1         void std::_Destroy<int*, int>(int*, int*, std::allocator<int>&) [159]
+                0.00    0.00       1/1           void std::_Destroy<int*>(int*, int*) [158]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2022 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+ [120] __static_initialization_and_destruction_0(int, int) (punto_1_3.cpp) [54] void std::_Destroy_aux<true>::__destroy<double*>(double*, double*) [152] std::vector<Coffee, std::allocator<Coffee> >::_M_default_initialize(unsigned long)
+ [121] __static_initialization_and_destruction_0(int, int) (Calculos.cpp) [132] void std::_Destroy_aux<true>::__destroy<int*>(int*, int*) [153] std::vector<Coffee, std::allocator<Coffee> >::vector(unsigned long, std::allocator<Coffee> const&)
+   [2] move(Coffee&, int, int, int) [133] std::_Vector_base<Coffee, std::allocator<Coffee> >::_M_allocate(unsigned long) [15] std::vector<Coffee, std::allocator<Coffee> >::~vector()
+  [20] inicial(std::vector<Coffee, std::allocator<Coffee> >&, int) [134] std::_Vector_base<Coffee, std::allocator<Coffee> >::_Vector_impl::_Vector_impl(std::allocator<Coffee> const&) [30] std::vector<Coffee, std::allocator<Coffee> >::operator[](unsigned long)
+  [22] calculos(std::vector<Coffee, std::allocator<Coffee> >&, int, int, int) [135] std::_Vector_base<Coffee, std::allocator<Coffee> >::_Vector_impl::~_Vector_impl() [67] std::vector<double, std::allocator<double> >::_S_max_size(std::allocator<double> const&)
+  [36] Coffee::r()           [136] std::_Vector_base<Coffee, std::allocator<Coffee> >::_M_deallocate(Coffee*, unsigned long) [68] std::vector<double, std::allocator<double> >::_S_check_init_len(unsigned long, std::allocator<double> const&)
+  [19] Coffee::x()           [137] std::_Vector_base<Coffee, std::allocator<Coffee> >::_M_create_storage(unsigned long) [69] std::vector<double, std::allocator<double> >::_M_fill_initialize(unsigned long, double const&)
+  [18] Coffee::y()           [138] std::_Vector_base<Coffee, std::allocator<Coffee> >::_Vector_impl_data::_Vector_impl_data() [70] std::vector<double, std::allocator<double> >::vector(unsigned long, double const&, std::allocator<double> const&)
+  [41] Coffee::load(int, int) [119] std::_Vector_base<Coffee, std::allocator<Coffee> >::_M_get_Tp_allocator() [71] std::vector<double, std::allocator<double> >::~vector()
+  [34] Coffee::move_x(bool)  [139] std::_Vector_base<Coffee, std::allocator<Coffee> >::_Vector_base(unsigned long, std::allocator<Coffee> const&) [35] std::vector<double, std::allocator<double> >::operator[](unsigned long)
+  [33] Coffee::move_y(bool)  [140] std::_Vector_base<Coffee, std::allocator<Coffee> >::~_Vector_base() [93] std::vector<int, std::allocator<int> >::_S_max_size(std::allocator<int> const&)
+  [38] Coffee::Coffee()       [55] std::_Vector_base<double, std::allocator<double> >::_M_allocate(unsigned long) [94] std::vector<int, std::allocator<int> >::_S_relocate(int*, int*, int*, std::allocator<int>&)
+ [122] __gnu_cxx::new_allocator<Coffee>::deallocate(Coffee*, unsigned long) [56] std::_Vector_base<double, std::allocator<double> >::_Vector_impl::_Vector_impl(std::allocator<double> const&) [95] std::vector<int, std::allocator<int> >::_S_do_relocate(int*, int*, int*, std::allocator<int>&, std::integral_constant<bool, true>)
+ [123] __gnu_cxx::new_allocator<Coffee>::allocate(unsigned long, void const*) [57] std::_Vector_base<double, std::allocator<double> >::_Vector_impl::~_Vector_impl() [112] void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&)
+ [116] __gnu_cxx::new_allocator<Coffee>::new_allocator(__gnu_cxx::new_allocator<Coffee> const&) [58] std::_Vector_base<double, std::allocator<double> >::_M_deallocate(double*, unsigned long) [113] std::vector<int, std::allocator<int> >::end()
+ [124] __gnu_cxx::new_allocator<Coffee>::new_allocator() [59] std::_Vector_base<double, std::allocator<double> >::_M_create_storage(unsigned long) [114] std::vector<int, std::allocator<int> >::begin()
+ [103] __gnu_cxx::new_allocator<Coffee>::~new_allocator() [60] std::_Vector_base<double, std::allocator<double> >::_Vector_impl_data::_Vector_impl_data() [101] std::vector<int, std::allocator<int> >::push_back(int const&)
+  [49] __gnu_cxx::new_allocator<double>::deallocate(double*, unsigned long) [47] std::_Vector_base<double, std::allocator<double> >::_M_get_Tp_allocator() [154] std::vector<int, std::allocator<int> >::vector()
+  [50] __gnu_cxx::new_allocator<double>::allocate(unsigned long, void const*) [61] std::_Vector_base<double, std::allocator<double> >::_Vector_base(unsigned long, std::allocator<double> const&) [155] std::vector<int, std::allocator<int> >::~vector()
+  [44] __gnu_cxx::new_allocator<double>::new_allocator(__gnu_cxx::new_allocator<double> const&) [62] std::_Vector_base<double, std::allocator<double> >::~_Vector_base() [102] std::vector<int, std::allocator<int> >::operator[](unsigned long)
+  [51] __gnu_cxx::new_allocator<double>::new_allocator() [109] std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) [13] std::__detail::_Mod<unsigned long, 4294967296ul, 1ul, 0ul, true, true>::__calc(unsigned long)
+  [42] __gnu_cxx::new_allocator<double>::~new_allocator() [141] std::_Vector_base<int, std::allocator<int> >::_Vector_impl::_Vector_impl() [12] std::__detail::_Mod<unsigned long, 624ul, 1ul, 0ul, true, true>::__calc(unsigned long)
+ [104] __gnu_cxx::new_allocator<int>::deallocate(int*, unsigned long) [142] std::_Vector_base<int, std::allocator<int> >::_Vector_impl::~_Vector_impl() [11] unsigned long std::__detail::__mod<unsigned long, 4294967296ul, 1ul, 0ul>(unsigned long)
+ [105] __gnu_cxx::new_allocator<int>::allocate(unsigned long, void const*) [99] std::_Vector_base<int, std::allocator<int> >::_M_deallocate(int*, unsigned long) [10] unsigned long std::__detail::__mod<unsigned long, 624ul, 1ul, 0ul>(unsigned long)
+  [98] void __gnu_cxx::new_allocator<int>::construct<int, int const&>(int*, int const&) [143] std::_Vector_base<int, std::allocator<int> >::_Vector_impl_data::_Vector_impl_data() [39] void std::_Construct<Coffee>(Coffee*)
+ [125] __gnu_cxx::new_allocator<int>::new_allocator() [87] std::_Vector_base<int, std::allocator<int> >::_M_get_Tp_allocator() [72] double* std::__fill_n_a<double*, unsigned long, double>(double*, unsigned long, double const&, std::random_access_iterator_tag)
+ [126] __gnu_cxx::new_allocator<int>::~new_allocator() [144] std::_Vector_base<int, std::allocator<int> >::_Vector_base() [40] Coffee* std::__addressof<Coffee>(Coffee&)
+  [88] __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >::__normal_iterator(int* const&) [145] std::_Vector_base<int, std::allocator<int> >::~_Vector_base() [82] int* std::__niter_base<int*>(int*)
+ [106] __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >::difference_type __gnu_cxx::operator-<int*, std::vector<int, std::allocator<int> > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > > const&, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > > const&) [146] std::allocator_traits<std::allocator<Coffee> >::deallocate(std::allocator<Coffee>&, Coffee*, unsigned long) [96] int* std::__relocate_a<int*, int*, std::allocator<int> >(int*, int*, int*, std::allocator<int>&)
+ [117] __gnu_cxx::new_allocator<Coffee>::_M_max_size() const [147] std::allocator_traits<std::allocator<Coffee> >::allocate(std::allocator<Coffee>&, unsigned long) [97] std::enable_if<std::__is_bitwise_relocatable<int, void>::value, int*>::type std::__relocate_a_1<int, int>(int*, int*, int*, std::allocator<int>&)
+ [127] __gnu_cxx::new_allocator<Coffee>::max_size() const [148] std::allocator_traits<std::allocator<Coffee> >::max_size(std::allocator<Coffee> const&) [73] std::__size_to_integer(unsigned long)
+  [45] __gnu_cxx::new_allocator<double>::_M_max_size() const [63] std::allocator_traits<std::allocator<double> >::deallocate(std::allocator<double>&, double*, unsigned long) [74] std::iterator_traits<double*>::iterator_category std::__iterator_category<double*>(double* const&)
+  [52] __gnu_cxx::new_allocator<double>::max_size() const [64] std::allocator_traits<std::allocator<double> >::allocate(std::allocator<double>&, unsigned long) [75] double* std::uninitialized_fill_n<double*, unsigned long, double>(double*, unsigned long, double const&)
+  [86] __gnu_cxx::new_allocator<int>::_M_max_size() const [65] std::allocator_traits<std::allocator<double> >::max_size(std::allocator<double> const&) [76] double* std::__uninitialized_fill_n_a<double*, unsigned long, double, double>(double*, unsigned long, double const&, std::allocator<double>&)
+  [89] __gnu_cxx::new_allocator<int>::max_size() const [110] std::allocator_traits<std::allocator<int> >::deallocate(std::allocator<int>&, int*, unsigned long) [156] Coffee* std::__uninitialized_default_n<Coffee*, unsigned long>(Coffee*, unsigned long)
+  [83] __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >::base() const [111] std::allocator_traits<std::allocator<int> >::allocate(std::allocator<int>&, unsigned long) [157] Coffee* std::__uninitialized_default_n_a<Coffee*, unsigned long, Coffee>(Coffee*, unsigned long, std::allocator<Coffee>&)
+  [90] std::_Vector_base<int, std::allocator<int> >::_M_get_Tp_allocator() const [92] std::allocator_traits<std::allocator<int> >::max_size(std::allocator<int> const&) [115] unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&)
+  [29] std::uniform_int_distribution<int>::param_type::a() const [100] void std::allocator_traits<std::allocator<int> >::construct<int, int const&>(std::allocator<int>&, int*, int const&) [48] unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&)
+  [14] std::uniform_int_distribution<int>::param_type::b() const [66] double* std::__uninitialized_fill_n<true>::__uninit_fill_n<double*, unsigned long, double>(double*, unsigned long, double const&) [21] __gnu_cxx::__enable_if<std::__is_integer<int>::__value, double>::__type std::sqrt<int>(int)
+ [107] std::vector<int, std::allocator<int> >::_M_check_len(unsigned long, char const*) const [9] std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand() [77] double* std::fill_n<double*, unsigned long, double>(double*, unsigned long, double const&)
+  [84] std::vector<int, std::allocator<int> >::size() const [5] std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::seed(unsigned long) [85] int const& std::forward<int const&>(std::remove_reference<int const&>::type&)
+  [91] std::vector<int, std::allocator<int> >::max_size() const [6] std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::mersenne_twister_engine(unsigned long) [16] void std::_Destroy<Coffee*>(Coffee*, Coffee*)
+ [118] std::allocator<Coffee>::allocator(std::allocator<Coffee> const&) [7] std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()() [17] void std::_Destroy<Coffee*, Coffee>(Coffee*, Coffee*, std::allocator<Coffee>&)
+ [128] std::allocator<Coffee>::allocator() [31] std::uniform_int_distribution<int>::param_type::param_type(int, int) [78] void std::_Destroy<double*>(double*, double*)
+ [108] std::allocator<Coffee>::~allocator() [8] unsigned int std::uniform_int_distribution<int>::_S_nd<unsigned long, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>, unsigned int>(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, unsigned int) [79] void std::_Destroy<double*, double>(double*, double*, std::allocator<double>&)
+  [46] std::allocator<double>::allocator(std::allocator<double> const&) [32] std::uniform_int_distribution<int>::uniform_int_distribution(int, int) [158] void std::_Destroy<int*>(int*, int*)
+  [53] std::allocator<double>::allocator() [3] int std::uniform_int_distribution<int>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&) [159] void std::_Destroy<int*, int>(int*, int*, std::allocator<int>&)
+  [43] std::allocator<double>::~allocator() [4] int std::uniform_int_distribution<int>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_int_distribution<int>::param_type const&) [80] void std::__fill_a<double*, double>(double*, double*, double const&)
+ [129] std::allocator<int>::allocator() [149] Coffee* std::__uninitialized_default_n_1<false>::__uninit_default_n<Coffee*, unsigned long>(Coffee*, unsigned long) [81] __gnu_cxx::__enable_if<std::__is_scalar<double>::__value, void>::__type std::__fill_a1<double*, double>(double*, double*, double const&)
+ [130] std::allocator<int>::~allocator() [150] std::vector<Coffee, std::allocator<Coffee> >::_S_max_size(std::allocator<Coffee> const&) [37] operator new(unsigned long, void*)
+ [131] void std::_Destroy_aux<true>::__destroy<Coffee*>(Coffee*, Coffee*) [151] std::vector<Coffee, std::allocator<Coffee> >::_S_check_init_len(unsigned long, std::allocator<Coffee> const&) [1] main
