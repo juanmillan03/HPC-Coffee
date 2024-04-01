@@ -22,14 +22,14 @@ int main(int argc, char* argv[]) {
     int N = integers[0];
     int latti = integers[1]; 
     int it = integers[2];
-    int seed = integers[3];  
+    int seed = integers[3]; 
+    int data = 10000;         //Ayuda a definir cuantos datos queremos ya que divide al tiempo total
+ 
     std::vector<Coffee> cup(N);
-    std::mt19937 gen(seed);
-    std::uniform_int_distribution<> dis(0, N - 1);
     inicial(cup,N);
     for (int i = 0; i < it; i++){
-        move(cup[dis(gen)],N,seed+i,100);
-        if (i%10000==0)
+        move(cup,N,seed+i,100);
+        if (i%data==0)
         {
             std::vector<double>respuesta=calculos(cup,N,latti,100);
             std::cout<<i<<"\t"<<respuesta[0]<<"\t"<<respuesta[1]<<std::endl;
