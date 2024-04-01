@@ -5,6 +5,7 @@
 #include <random>
 #include <fstream>
 
+
 int main(int argc, char* argv[]) {
 
     std::ifstream file(argv[1]);
@@ -26,23 +27,19 @@ int main(int argc, char* argv[]) {
     int it = integers[2];
     int seed = integers[3]; 
     int data = 10000;         //Ayuda a definir cuantos datos queremos ya que divide al tiempo total
-
     std::vector<Coffee> cup(N);
-    std::mt19937 gen(seed);
-    std::uniform_int_distribution<> dis(0, N - 1);
-
     std::vector<double> Entropy (it/data);     //Guarda los datos de la entropía
-    std::vector<int> sizes = {60,70,80,90,100};    //Tamaños de la red
+    std::vector<int> sizes = {70,80,90,100,110};    //Tamaños de la red
     for (const auto& nt : sizes){
         inicial(cup,N);
         for (int i = 0; i < it; i++){
-            move(cup[dis(gen)],N,seed+i,nt);
+            move(cup,N,seed+i,nt);
             if (i%data==0){
                 std::vector<double>respuesta=calculos(cup,N,latti,nt);
                 Entropy[i/data] = respuesta[0];
             }
         }
-        std::cout << nt*nt <<" "<<TiempoEquilibrio(Entropy, 0.5e-2, it, data) << std::endl;
+        std::cout << nt <<" "<<TiempoEquilibrio(Entropy, 0.005, it, data) << std::endl;
     }
     return 0;
 }

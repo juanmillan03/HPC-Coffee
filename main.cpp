@@ -25,11 +25,9 @@ int main(int argc, char* argv[]) {
     int seed = integers[3];  
 
     std::vector<Coffee> cup(N);
-    std::mt19937 gen(seed);
-    std::uniform_int_distribution<> dis(0, N - 1);
     inicial(cup,N);
     for (int i = 0; i < it; i++){
-        move(cup[dis(gen)],N,seed+i,100);
+        move(cup,N,seed+i,100);
     }
     for (int i = 0; i < N; i++)
     {
