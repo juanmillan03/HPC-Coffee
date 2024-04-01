@@ -5,5 +5,5 @@ Proyecto intermedio de HPC
 
 - Juan Diego Rueda
 - Nelson Andres Rodriguez
-- Johan
+- Johan Alejandro Lopez Arias
 - Juan Esteban Millán 
