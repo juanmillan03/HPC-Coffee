@@ -27,6 +27,7 @@ int main(int argc, char* argv[]) {
     int it = integers[2];
     int seed = integers[3]; 
     int data = 10000;         //Ayuda a definir cuantos datos queremos ya que divide al tiempo total
+    
     std::vector<Coffee> cup(N);
     std::vector<double> Entropy (it/data);     //Guarda los datos de la entropía
     std::vector<int> sizes = {70,80,90,100,110};    //Tamaños de la red

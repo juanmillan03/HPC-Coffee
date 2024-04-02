@@ -5,13 +5,11 @@ import numpy as np
 from scipy.stats import norm
 from scipy.stats import linregress
 
-
-def plot(data_path):
-    datos=pd.read_csv(data_path,sep="\t" ,names=['t','E',"S"])
+if __name__ == "__main__":      
+    path = sys.argv[1]
+    datos=pd.read_csv(path,sep="\t" ,names=['t','E',"S"])
     
     fig1, ax1 = plt.subplots( )
-    
-    
     
     ax1.scatter(datos['t']/1e6,datos['E'],s=2)
     ax1.set_xlabel("time(10⁶unit)")
@@ -30,20 +28,11 @@ def plot(data_path):
     teori_s= intercept+slope*teori_t
     
     fig2, ax2 = plt.subplots( )
-    label_ajuste=f'Regresion K*ln(t)+b\n K={slope:.3f} ± {std_err:.3f} -- b={intercept:.2f} ± {se_intercept:.2f}'
-    ax2.scatter(np.log(datos["t"][16:]),np.log(datos["S"][16:]),s=2,c="b",label="Tamaño medio")
+    label_ajuste=f'Regression m*ln(t)+b\n m={slope:.3f} ± {std_err:.3f}    b={intercept:.2f} ± {se_intercept:.2f}'
+    ax2.scatter(np.log(datos["t"][16:]),np.log(datos["S"][16:]),s=2,c="b",label="Mean size")
     ax2.plot(teori_t,teori_s,label=label_ajuste,c="r",linestyle='--')
-    ax2.set_xlabel("Ln( Tiempo )")
-    ax2.set_ylabel("Ln( Tamaño )")
+    ax2.set_xlabel("Ln( Time )")
+    ax2.set_ylabel("Ln( Size )")
     ax2.grid(True, linewidth=0.1)
     ax2.legend()
     plt.savefig("./pdf/Size.pdf")
-    
-    
-if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: python graficador.py <data_path>")
-        sys.exit(1)
-        
-    data_path = sys.argv[1]
-    plot(data_path)
