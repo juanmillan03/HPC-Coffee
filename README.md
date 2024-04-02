@@ -3,7 +3,7 @@
 Proyecto intermedio de HPC
 ### Integrantes 
 
-- Juan Diego Rueda
-- Nelson Andres Rodriguez
-- Johan Alejandro Lopez Arias
-- Juan Esteban Millán 
+- Rueda Juan Diego 
+- Rodriguez Nelson Andres 
+- Lopez Arias Johan Alejandro 
+- Millán Díaz Juan Esteban
